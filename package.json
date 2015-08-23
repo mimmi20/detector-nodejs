@@ -1,0 +1,42 @@
+{
+  "name": "detector-nodejs",
+  "description": "Combined browser- & feature-detection for your app on Node.js",
+  "keywords": ["useragent", "user-agent", "detector", "device", "YABFDL", "feature detection"],
+  "author": "Thomas Müller",
+  "contributors": [
+    "Thomas Müller (http://github.com/mimmi20)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/mimmi20/detector-nodejs.git"
+  },
+  "bugs": {
+    "url": "http://github.com/mimmi20/detector-nodejs/issues"
+  },
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/mimmi20/detector-nodejs/README.md"
+    }
+  ],
+  "dependencies": {
+    "express": "~4.2.0",
+    "serve-favicon": "~2.3.0",
+    "morgan": "~1.0.0",
+    "cookie-parser": "~1.0.1",
+    "body-parser": "~1.0.0",
+    "debug": "~0.7.4",
+    "jade": "~1.3.0",
+    "modernizr": "*"
+  },
+  "homepage": "https://github.com/mimmi20/detector-nodejs",
+  "license": "MIT"
+}
