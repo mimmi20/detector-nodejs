@@ -1,10 +1,26 @@
 doctype html
 html(lang='en')
   head
-    title= Detector [BETA] - combined browser- & feature-detection for your app
+    title= title
     meta(name='viewport', content='width=device-width')
     link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
     ### mobile switch
     link(rel='stylesheet', href='/stylesheets/general.css')
+    script(type='text/javascript', src='/javascripts/modernizr.2.8.3.min.custom.js')
+    script(type='text/javascript', src='/javascripts/tests.demo.js')
   body
-    block content
+    div.container
+      div.content
+        div.page-header
+          h1
+            a(href='/') Detector
+            span.label.notice.beta beta
+            small combined browser- & feature-detection for your app
+        div.row
+          block content
+      footer
+        p
+          &copy;
+          a(href='http://dmolsen.com/') Dave Olsen
+          2012 | Design based on
+          a(href='http://twitter.github.com/bootstrap/')
