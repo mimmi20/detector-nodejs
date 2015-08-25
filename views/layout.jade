@@ -2,9 +2,13 @@ doctype html
 html(lang='en')
   head
     title= title
-    meta(name='viewport', content='width=device-width')
+    if modernizr.isMobile
+      meta(name='viewport', content='width=device-width')
     link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
-    ### mobile switch
+    if modernizr.isMobile
+      link(rel='stylesheet', href='/stylesheets/mobile.css')
+    else
+      link(rel='stylesheet', href='/stylesheets/desktop.css')
     link(rel='stylesheet', href='/stylesheets/general.css')
     script(type='text/javascript', src='/javascripts/modernizr.2.8.3.min.custom.js')
     script(type='text/javascript', src='/javascripts/tests.demo.js')
@@ -15,12 +19,12 @@ html(lang='en')
           h1
             a(href='/') Detector
             span.label.notice.beta beta
-            small combined browser- & feature-detection for your app
+            small= ' combined browser- & feature-detection for your app '
         div.row
           block content
       footer
         p
-          &copy;
+          != ' &copy; '
           a(href='http://dmolsen.com/') Dave Olsen
-          2012 | Design based on
-          a(href='http://twitter.github.com/bootstrap/')
+          != ' 2012 | Design based on '
+          a(href='http://twitter.github.com/bootstrap/') Bootstrap
