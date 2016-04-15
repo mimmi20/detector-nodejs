@@ -9,7 +9,7 @@ router.get('/', function(req, res) {
     'index',
     {
       title: 'Detector [BETA] - combined browser- & feature-detection for your app',
-      modernizr: modernizr
+      modernizr: Modernizr
     }
   );
 });

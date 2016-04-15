@@ -1,146 +1,51 @@
 h3.
-  <?php echo  (Detector::$foundIn == 'archive') ? 'Archived' : 'Your'; ?> Detector Browser Profile
+  Your Detector Browser Profile
 p.
-  The following browser profile was created using <a href="https://github.com/dmolsen/ua-parser-php">ua-parser-php</a>. This information
+  The following browser profile was created using <a href="https://github.com/ua-parser/ua-core">ua-parser</a>. This information
   is derived solely from the user agent string for your browser.
-
-  <?php
-  //var_dump($ua);exit;
-    if (Detector::$foundIn == 'archive') {
-        if ($uaListJSON = @file_get_contents(__DIR__."/../../lib/Detector/user-agents/core/ua.list.json")) {
-            $uaList = (array) json_decode($uaListJSON);
-            asort($uaList);
-            $i = 0;
-            $oldkey = '';
-            $next = '';
-            foreach($uaList as $key => $value) {
-                if ($i == 1) {
-                    $next = $key;
-                    break;
-                }
-                if ($key == $ua->uaHash) {
-                    $previous = $oldkey;
-                    $i = 1;
-                }
-                $oldkey = $key;
-            }
-
-        }
-    }
-
 
 table.zebra-striped.span9
   thead
-    tr.
-      <th colspan="2">Browser Properties <span style="float: right; font-weight: normal; font-size: 12px;">
-      <?php if (isset($previous) && ($previous != '')) { ?>
-         <a href="/?pid=<?php echo $previous?>">Previous Profile</a>
-      <?php } ?>
-        <?php if ((isset($next) && ($next != '')) && (isset($previous) && ($previous != ''))) { ?>
-                |
-            <?php } ?>
-            <?php if (isset($next) && ($next != '')) { ?>
-                <a href="/?pid=<?php echo $next?>">Next Profile</a>
-            <?php } ?></span></th>
-  tbody.
-        <tr>
-            <th class="span3">User Agent:</th>
-            <td><?php echo $ua->ua?></td>
-        </tr>
-        <?php
-            if (isset($ua->isMobile) && $ua->isMobile && (Detector::$foundIn != "archive")) {
+    tr
+      th(colspan='2') Browser Properties
+  tbody
+    tr
+      th.col-xs-3 User Agent:
+      td UA
+    tr
+      th.col-xs-3 Browsername
+      td Browsername
+    tr
+      th.col-xs-3 Device
+      td Device
+    tr
+      th.col-xs-3
+      td Device
+    tr
+      th.col-xs-3 Is UIWebview?
+      td n/a
+    tr
+      th.col-xs-3 Is Mobile?
+      td n/a
+    tr
+      th.col-xs-3 Is Mobile Device?
+      td n/a
+    tr
+      th.col-xs-3 Is Tablet?
+      td n/a
+    tr
+      th.col-xs-3 Is Computer?
+      td n/a
+    tr
+      th.col-xs-3 Is Spider?
+      td n/a
 
-            } else { ?>
-                <tr>
-                    <th class="span3">UA Hash:</th>
-                    <td><?php echo $ua->uaHash?></td>
-                </tr>
-        <?php } ?>
-        <?php if (isset($ua->full)) { ?>
-            <tr>
-                <th class="span3">Browser/OS:</th>
-                <td><?php echo $ua->full?></td>
-            </tr>
-        <?php } else if (isset($ua->browserFull)) { ?>
-            <tr>
-                <th class="span3">Browser:</th>
-                <td><?php echo $ua->browserFull?></td>
-            </tr>
-        <?php } ?>
-        <?php if (isset($ua->device) && ($ua->device != '')) { ?>
-            <tr>
-                <th>Device:</th>
-                <td><?php var_dump($ua->device);//echo $ua->device; ?></td>
-            </tr>
-        <?php } ?>
-        <?php if (isset($ua->browser) && ($ua->browser == 'Mobile Safari')) { ?>
-            <tr>
-                <th>Is UIWebview?</th>
-                <td><?php echo convertTF($ua->isUIWebview)?></td>
-            </tr>
-        <?php } ?>
-
-            <tr>
-                <th>Is Mobile?</th>
-                <td>
-                    <?php
-                        if (isset($ua->isMobile)) {
-                            print convertTF($ua->isMobile);
-                        } else {
-                            print "<span class='label important'>false</span>";
-                        }
-                    ?>
-                </td>
-            </tr>
-        <tr>
-            <th>Is Mobile Device?</th>
-            <td>
-                <?php
-                    if (isset($ua->isMobileDevice)) {
-                        print convertTF($ua->isMobileDevice);
-                    } else {
-                        print "<span class='label important'>false</span>";
-                    }
-                ?>
-            </td>
-        </tr>
-        <tr>
-            <th>Is Tablet?</th>
-            <td>
-                <?php
-                    if (isset($ua->isTablet)) {
-                        print convertTF($ua->isTablet);
-                    } else {
-                        print "<span class='label important'>false</span>";
-                    }
-                ?>
-            </td>
-        </tr>
-        <tr>
-            <th>Is Computer?</th>
-            <td>
-                <?php
-                    if (isset($ua->isComputer)) {
-                        print convertTF($ua->isComputer);
-                    } else {
-                        print "<span class='label important'>false</span>";
-                    }
-                ?>
-            </td>
-        </tr>
-        <tr>
-            <th>Is Spider?</th>
-            <td>
-                <?php
-                    if (isset($ua->isSpider)) {
-                        print convertTF($ua->isSpider);
-                    } else {
-                        print "<span class='label important'>false</span>";
-                    }
-                ?>
-            </td>
-        </tr>
-
-p.
-  <strong>Something wrong with this profile?</strong> Please, <a href="/contact.php?cid=<?php echo $ua->uaHash?>">let me know</a>. Note that
-  the <strong>"tablet" classification may be incorrect</strong> for those Android tablets using an OS older than Android 3.0.
+p
+  strong.
+    Something wrong with this profile?
+  != ' Please, '
+  a(href='/contact') let me know
+  != ' Note that the '
+  strong.
+    "tablet" classification may be incorrect
+  != ' for those Android tablets using an OS older than Android 3.0.'
