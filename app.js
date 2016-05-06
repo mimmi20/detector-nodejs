@@ -30,7 +30,20 @@ app.use(logger('dev'));
 app.use(methodOverride('X-HTTP-Method-Override'));
 app.use(responseTime(4));
 //app.use(favicon(__dirname + '/public/favicon.ico'));
-app.use(express.static(path.join(__dirname, 'public')));
+var options = {
+  dotfiles: 'ignore',
+  etag: false,
+  extensions: ['htm', 'html'],
+  index: false,
+  lastModified: true,
+  maxAge: '1d',
+  redirect: false,
+  setHeaders: function (res, path, stat) {
+    res.set('x-timestamp', Date.now());
+  }
+};
+
+app.use(express.static(__dirname + '/public', options));
 //app.use(bodyParser.json());
 //app.use(bodyParser.urlencoded());
 app.use(cookieParser());
