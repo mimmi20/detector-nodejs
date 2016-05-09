@@ -18,15 +18,18 @@ html(lang='en')
       != '/*document.write(JSON.stringify(result));/**/document.write(JSON.stringify(missing));'
   body
     div.container
-      div.content.col-xs-12
-        div.page-header
+      div.content.clearfix
+        div.page-header.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.clearfix
           h1
             a(href='/') Detector
             span.label.notice.beta beta
             small= ' combined browser- & feature-detection for your app '
-        div.row
+          div(id='forkme')
+            a(href='https://github.com/dmolsen/Detector')!= '<img src="/images/ForkMe_Wht.png" width="141" height="141" alt="Fork Me on GitHub"/>'
+
+        div.row.clearfix
           block content
-      footer.col-xs-12
+      footer.clearfix
         p
           != ' &copy; '
           a(href='http://dmolsen.com/') Dave Olsen

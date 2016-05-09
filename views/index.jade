@@ -1,8 +1,8 @@
 extends layout
 
 block content
-  div.col-xs-9
-    p.
+  div.col-xs-12.col-sm-12.col-md-12.col-lg-9.col-xl-9
+    p.row.
       With the initial release of <a href="http://yiibu.com/">Yiibu&apos;s</a> <a
           href="https://github.com/yiibu/profile">Profile</a>, <a href="https://github.com/dmolsen/Detector">Detector</a>
       is already <abbr title="Yet Another Browser- and Feature-Detection Library">YABFDL</abbr>
@@ -14,13 +14,8 @@ block content
       out the <a href="https://github.com/dmolsen/Detector">README on GitHub</a>.
     include ./partials/_browserprofile.jade
     include ./partials/_featureprofile.jade
-  p Welcome to #{title}
-    != Desktop
-  div.col-xs-3
+  div.col-xs-12.col-sm-12.col-md-12.col-lg-3.col-xl-3
     include ./partials/_about.jade
     include ./partials/_moreinfo.jade
     include ./partials/_credits.jade
-
-  div(id='forkme')
-    a(href='https://github.com/dmolsen/Detector')!= '<img src="/images/ForkMe_Wht.png" width="141" height="141" alt="Fork Me on GitHub"/>'
-
+    include ./partials/_archive.jade

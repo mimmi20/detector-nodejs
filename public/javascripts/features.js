@@ -44,7 +44,12 @@ var x = {
   "applicationcache": "t",
   "atob-btoa": "t",
   "atobbtoa": "t",
-  "audio": {"m4a": "m", "mp3": "p", "ogg": "p", "opus": "p", "wav": "p"},
+  "audio": "t",
+  "audio.m4a": "",
+  "audio.mp3": "",
+  "audio.ogg": "",
+  "audio.opus": "",
+  "audio.wav": "",
   "audioloop": "t",
   "backdropfilter": "f",
   "backgroundblendmode": "t",
@@ -89,19 +94,18 @@ var x = {
   "cssanimations": "t",
   "csscalc": "t",
   "csschunit": "t",
-  "csscolumns": {
-    "breakafter": "t",
-    "breakbefore": "t",
-    "breakinside": "t",
-    "fill": "f",
-    "gap": "t",
-    "rule": "t",
-    "rulecolor": "t",
-    "rulestyle": "t",
-    "rulewidth": "t",
-    "span": "t",
-    "width": "t"
-  },
+  "csscolumns": "",
+  "csscolumns.breakafter": "",
+  "csscolumns.breakbefore": "",
+  "csscolumns.breakinside": "",
+  "csscolumns.fill": "",
+  "csscolumns.gap": "",
+  "csscolumns.rule": "",
+  "csscolumns.rulecolor": "",
+  "csscolumns.rulestyle": "",
+  "csscolumns.rulewidth": "",
+  "csscolumns.span": "",
+  "csscolumns.width": "",
   "cssescape": "t",
   "cssexunit": "t",
   "cssfilters": "t",
@@ -131,7 +135,8 @@ var x = {
   "datachannel": "t",
   "datalistelem": "t",
   "dataset": "t",
-  "datauri": {"over32kb": ""},
+  "datauri": "",
+  "datauri.over32kb": "",
   "dataview": "t",
   "dataworkers": "",
   "details": "t",
@@ -195,21 +200,21 @@ var x = {
   "htmlimports": "t",
   "ie8compat": "f",
   "imgcrossorigin": "t",
-  "indexeddb": {"deletedatabase": "t"},
+  "indexeddb": "",
+  "indexeddb.deletedatabase": "",
   "indexeddbblob": "",
   "inlinesvg": "t",
-  "input": {
-    "autocomplete": "t",
-    "autofocus": "t",
-    "list": "t",
-    "max": "t",
-    "min": "t",
-    "multiple": "t",
-    "pattern": "t",
-    "placeholder": "t",
-    "required": "t",
-    "step": "t"
-  },
+  "input.autocomplete": "",
+  "input.autofocus": "",
+  "input.list": "",
+  "input.max": "",
+  "input.min": "",
+  "input.multiple": "",
+  "input.pattern": "",
+  "input.placeholder": "",
+  "input.required": "",
+  "input.step": "",
+  "input": "",
   "input-formaction": "t",
   "input-formenctype": "t",
   "input-formtarget": "f",
@@ -218,21 +223,19 @@ var x = {
   "inputformmethod": "t",
   "inputformtarget": "f",
   "inputsearchevent": "t",
-  "inputtypes": {
-    "color": "t",
-    "date": "t",
-    "datetime": "f",
-    "datetime-local": "t",
-    "email": "t",
-    "month": "t",
-    "number": "t",
-    "range": "t",
-    "search": "t",
-    "tel": "t",
-    "time": "t",
-    "url": "t",
-    "week": "t"
-  },
+  "inputtypes.color": "",
+  "inputtypes.date": "",
+  "inputtypes.datetime": "",
+  "inputtypes.datetime-local": "",
+  "inputtypes.email": "",
+  "inputtypes.month": "",
+  "inputtypes.number": "",
+  "inputtypes.range": "",
+  "inputtypes.search": "",
+  "inputtypes.tel": "",
+  "inputtypes.time": "",
+  "inputtypes.url": "",
+  "inputtypes.week": "",
   "intl": "t",
   "jpeg2000": "",
   "jpegxr": "",
@@ -267,7 +270,9 @@ var x = {
   "pointerevents": "f",
   "pointerlock": "t",
   "postmessage": "t",
-  "pr-screenattributes": {"colorDepth": 24, "windowHeight": 324, "windowWidth": 1366},
+  "pr-screenattributes.colorDepth": "",
+  "pr-screenattributes.windowHeight": "",
+  "pr-screenattributes.windowWidth": "",
   "preserve3d": "t",
   "progressbar": "t",
   "promises": "t",
@@ -335,45 +340,50 @@ var x = {
   "userdata": "f",
   "userselect": "t",
   "vibrate": "t",
-  "video": {"h264": "p", "hls": "e", "ogg": "p", "vp9": "p", "webm": "p"},
+  "video.h264": "",
+  "video.hls": "",
+  "video.ogg": "",
+  "video.vp9": "",
+  "video.webm": "",
   "videoloop": "t",
   "videopreload": "t",
   "vml": "f",
   "webanimations": "t",
   "webaudio": "t",
   "webgl": "t",
-  "webglextensions": {
-    "ANGLE_instanced_arrays": "t",
-    "EXT_blend_minmax": "t",
-    "EXT_disjoint_timer_query": "",
-    "EXT_frag_depth": "t",
-    "EXT_sRGB": "t",
-    "EXT_shader_texture_lod": "t",
-    "EXT_texture_filter_anisotropic": "t",
-    "OES_element_index_uint": "t",
-    "OES_standard_derivatives": "t",
-    "OES_texture_float": "t",
-    "OES_texture_float_linear": "t",
-    "OES_texture_half_float": "t",
-    "OES_texture_half_float_linear": "t",
-    "OES_vertex_array_object": "t",
-    "WEBGL_compressed_texture_etc1": "t",
-    "WEBGL_compressed_texture_s3tc": "t",
-    "WEBGL_debug_renderer_info": "t",
-    "WEBGL_debug_shaders": "t",
-    "WEBGL_depth_texture": "t",
-    "WEBGL_draw_buffers": "t",
-    "WEBGL_lose_context": "t",
-    "WEBKIT_EXT_texture_filter_anisotropic": "t",
-    "WEBKIT_WEBGL_compressed_texture_s3tc": "t",
-    "WEBKIT_WEBGL_depth_texture": "t",
-    "WEBKIT_WEBGL_lose_context": "t"
-  },
+  "webglextensions.ANGLE_instanced_arrays": "t",
+  "webglextensions.EXT_blend_minmax": "t",
+  "webglextensions.EXT_disjoint_timer_query": "",
+  "webglextensions.EXT_frag_depth": "t",
+  "webglextensions.EXT_sRGB": "t",
+  "webglextensions.EXT_shader_texture_lod": "t",
+  "webglextensions.EXT_texture_filter_anisotropic": "t",
+  "webglextensions.OES_element_index_uint": "t",
+  "webglextensions.OES_standard_derivatives": "t",
+  "webglextensions.OES_texture_float": "t",
+  "webglextensions.OES_texture_float_linear": "t",
+  "webglextensions.OES_texture_half_float": "t",
+  "webglextensions.OES_texture_half_float_linear": "t",
+  "webglextensions.OES_vertex_array_object": "t",
+  "webglextensions.WEBGL_compressed_texture_etc1": "t",
+  "webglextensions.WEBGL_compressed_texture_s3tc": "t",
+  "webglextensions.WEBGL_debug_renderer_info": "t",
+  "webglextensions.WEBGL_debug_shaders": "t",
+  "webglextensions.WEBGL_depth_texture": "t",
+  "webglextensions.WEBGL_draw_buffers": "t",
+  "webglextensions.WEBGL_lose_context": "t",
+  "webglextensions.WEBKIT_EXT_texture_filter_anisotropic": "t",
+  "webglextensions.WEBKIT_WEBGL_compressed_texture_s3tc": "t",
+  "webglextensions.WEBKIT_WEBGL_depth_texture": "t",
+  "webglextensions.WEBKIT_WEBGL_lose_context": "t",
   "webintents": "f",
   "webpalpha": "",
   "webpanimation": "",
   "webplossless": "",
-  "webp": {"alpha": "", "animation": "", "lossless": ""},
+  "webp": "",
+  "webp.alpha": "",
+  "webp.animation": "",
+  "webp.lossless": "",
   "websockets": "t",
   "websocketsbinary": "t",
   "websqldatabase": "t",
@@ -407,24 +417,15 @@ for (var property in x) {
   t = typeof x[property];
 
   if (t === 'object') {
-    result[property] = {};
+    continue;
+  }
 
-    for (var subproperty in x[property]) {
-      if (!x[property].hasOwnProperty(subproperty)) {
-        result[property][subproperty] = 'u';
+  var featureNameSplit = property.split('.');
 
-        continue;
-      }
-      if (!m[property].hasOwnProperty(subproperty)) {
-        result[property][subproperty] = 'u';
-
-        continue;
-      }
-
-      result[property][subproperty] = convert(m[property][subproperty]);
-    }
-  } else {
+  if (featureNameSplit.length === 1) {
     result[property] = convert(m[property]);
+  } else {
+    result[property] = convert(m[featureNameSplit[0]][featureNameSplit[1]]);
   }
 }
 
@@ -446,26 +447,19 @@ for (var f in m) {
   }
 
   if (w === 'object') {
-    if (x.hasOwnProperty(f) && typeof x[f] !== 'object') {
-      missing[f] = {type: 'mismatch: Modernizr: object <=> data object:' + typeof x[f]};
-    } else {
-      missing[f] = {};
-    }
     for (var s in m[f]) {
       if (!m[f].hasOwnProperty(s)) {
         continue;
       }
 
-      if (x[f].hasOwnProperty(s)) {
+      if (x.hasOwnProperty(f + '.' + s)) {
         continue;
       }
 
-      missing[f][s] = 1;
+      missing[f + '.' + s] = 1;
     }
   } else {
-    if (x.hasOwnProperty(f) && typeof x[f] === 'object') {
-      missing[f] = {type: 'mismatch: Modernizr:' + typeof m[f] + ' <==> data object: object'};
-    } else if (x.hasOwnProperty(f)) {
+    if (x.hasOwnProperty(f)) {
       continue;
     }
 
