@@ -60,6 +60,11 @@ module.exports = {
           "specurl": ""
         },
         {
+          "name": "display-runin",
+          "title": "CSS Display run-in",
+          "specurl": ""
+        },
+        {
           "name": "flexbox",
           "title": "Flexible Box Model",
           "specurl": "http://dev.w3.org/csswg/css3-flexbox/"
@@ -122,7 +127,53 @@ module.exports = {
         {
           "name": "csscolumns",
           "title": "CSS Columns",
-          "specurl": "http://dev.w3.org/csswg/css3-multicol/"
+          "specurl": "http://dev.w3.org/csswg/css3-multicol/",
+          "subfeatures": [
+            {
+              "name": "breakafter",
+              "title": "breakafter"
+            },
+            {
+              "name": "breakbefore",
+              "title": "breakbefore"
+            },
+            {
+              "name": "breakinside",
+              "title": "breakinside"
+            },
+            {
+              "name": "fill",
+              "title": "fill"
+            },
+            {
+              "name": "gap",
+              "title": "gap"
+            },
+            {
+              "name": "rule",
+              "title": "rule"
+            },
+            {
+              "name": "rulecolor",
+              "title": "rulecolor"
+            },
+            {
+              "name": "rulestyle",
+              "title": "rulestyle"
+            },
+            {
+              "name": "rulewidth",
+              "title": "rulewidth"
+            },
+            {
+              "name": "span",
+              "title": "span"
+            },
+            {
+              "name": "width",
+              "title": "width"
+            }
+          ]
         },
         {
           "name": "cssgradients",
@@ -168,8 +219,118 @@ module.exports = {
           "specurl": "https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip"
         },
         {
+          "name": "bgpositionshorthand",
+          "title": "Background Position Shorthand",
+          "specurl": "https://www.w3.org/TR/css3-background/#background-position"
+        },
+        {
+          "name": "bgpositionxy",
+          "title": "Background Position XY",
+          "specurl": "https://www.w3.org/TR/css3-background/#background-position"
+        },
+        {
           "name": "checked",
           "title": "CSS :checked pseudo-selector",
+          "specurl": ""
+        },
+        {
+          "name": "cssinvalid",
+          "title": "CSS :invalid pseudo-class",
+          "specurl": ""
+        },
+        {
+          "name": "cssvalid",
+          "title": "CSS :valid pseudo-class",
+          "specurl": ""
+        },
+        {
+          "name": "cssall",
+          "title": "cssall",
+          "specurl": "https://drafts.csswg.org/css-cascade/#all-shorthand"
+        },
+        {
+          "name": "csscalc",
+          "title": "CSS Calc",
+          "specurl": ""
+        },
+        {
+          "name": "cssescape",
+          "title": "CSS.escape()",
+          "specurl": ""
+        },
+        {
+          "name": "csschunit",
+          "title": "CSS Font ch Units",
+          "specurl": ""
+        },
+        {
+          "name": "cssexunit",
+          "title": "CSS Font ex Units",
+          "specurl": "https://www.w3.org/TR/css3-values/#font-relative-lengths"
+        },
+        {
+          "name": "cssremunit",
+          "title": "CSS Font rem Units",
+          "specurl": "https://www.w3.org/TR/css3-values/#relative0"
+        },
+        {
+          "name": "cssvhunit",
+          "title": "CSS vh Unit",
+          "specurl": ""
+        },
+        {
+          "name": "cssvmaxunit",
+          "title": "CSS vmax Unit",
+          "specurl": ""
+        },
+        {
+          "name": "cssvminunit",
+          "title": "CSS vmin Unit",
+          "specurl": ""
+        },
+        {
+          "name": "cssvwunit",
+          "title": "CSS vw Unit",
+          "specurl": ""
+        },
+        {
+          "name": "cssfilters",
+          "title": "CSS Filters",
+          "specurl": ""
+        },
+        {
+          "name": "cssmask",
+          "title": "CSS Mask",
+          "specurl": ""
+        },
+        {
+          "name": "csspointerevents",
+          "title": "CSS Pointer Events",
+          "specurl": ""
+        },
+        {
+          "name": "csspositionsticky",
+          "title": "CSS position: sticky",
+          "specurl": ""
+        },
+        {
+          "name": "csspseudoanimations",
+          "title": "CSS Generated Content Animations",
+          "specurl": ""
+        },
+        {
+          "name": "csspseudotransitions",
+          "title": "CSS Generated Content Transitions",
+          "specurl": ""
+        },
+        {
+          "name": "cssresize",
+          "title": "CSS UI Resize",
+          "specurl": "https://www.w3.org/TR/css3-ui/#resize"
+        },
+        {
+          "name": "cssscrollbar",
+          "title": "CSS Stylable Scrollbars",
           "specurl": ""
         }
       ]
@@ -339,6 +500,11 @@ module.exports = {
           "specurl": "http://www.whatwg.org/specs/web-apps/current-work/complete/workers.html"
         },
         {
+          "name": "dataworkers",
+          "title": "Workers from Data URIs",
+          "specurl": "https://www.w3.org/TR/workers/"
+        },
+        {
           "name": "adownload",
           "title": "a[download] Attribute",
           "specurl": "https://developers.whatwg.org/links.html#downloading-resources"
@@ -349,14 +515,19 @@ module.exports = {
           "specurl": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/bdi"
         },
         {
-          "name": "bgpositionshorthand",
-          "title": "Background Position Shorthand",
-          "specurl": "https://www.w3.org/TR/css3-background/#background-position"
+          "name": "contextmenu",
+          "title": "Context menus",
+          "specurl": "http://www.w3.org/TR/html5/interactive-elements.html#context-menus"
         },
         {
-          "name": "bgpositionxy",
-          "title": "Background Position XY",
-          "specurl": "https://www.w3.org/TR/css3-background/#background-position"
+          "name": "datalistelem",
+          "title": "datalist Element",
+          "specurl": ""
+        },
+        {
+          "name": "dataset",
+          "title": "dataset API",
+          "specurl": ""
         }
       ]
     },
@@ -509,7 +680,13 @@ module.exports = {
         {
           "name": "datauri",
           "title": "data URIs",
-          "specurl": ""
+          "specurl": "",
+          "subfeatures": [
+            {
+              "name": "over32kb",
+              "title": "over32kb"
+            }
+          ]
         },
         {
           "name": "emoji",
@@ -614,6 +791,41 @@ module.exports = {
           "name": "contenteditable",
           "title": "Content Editable",
           "specurl": "https://html.spec.whatwg.org/multipage/interaction.html#contenteditable"
+        },
+        {
+          "name": "cors",
+          "title": "Cross-Origin Resource Sharing",
+          "specurl": ""
+        },
+        {
+          "name": "createelementattrs",
+          "title": "createElement with Attributes",
+          "specurl": ""
+        },
+        {
+          "name": "crypto",
+          "title": "Web Cryptography API",
+          "specurl": "https://www.w3.org/TR/WebCryptoAPI/"
+        },
+        {
+          "name": "customevent",
+          "title": "customevent",
+          "specurl": ""
+        },
+        {
+          "name": "dart",
+          "title": "dart",
+          "specurl": "https://www.dartlang.org/"
+        },
+        {
+          "name": "dataview",
+          "title": "dataview API",
+          "specurl": ""
+        },
+        {
+          "name": "documentfragment",
+          "title": "Document Fragment",
+          "specurl": ""
         }
       ]
     },
@@ -624,6 +836,38 @@ module.exports = {
         {
           "name": "contains",
           "title": "ES5 String.prototype.contains",
+          "specurl": ""
+        }
+      ]
+    },
+    {
+      "name": "webrtc",
+      "title": "Web RTC",
+      "features": [
+        {
+          "name": "datachannel",
+          "title": "RTC Data Channel",
+          "specurl": ""
+        }
+      ]
+    },
+    {
+      "name": "own",
+      "title": "own Tests",
+      "features": [
+        {
+          "name": "core-desktop",
+          "title": "Desktop device",
+          "specurl": ""
+        },
+        {
+          "name": "core-mobile",
+          "title": "Mobile device",
+          "specurl": ""
+        },
+        {
+          "name": "core-tablet",
+          "title": "Tablet device",
           "specurl": ""
         }
       ]
