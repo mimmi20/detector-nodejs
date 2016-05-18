@@ -284,6 +284,11 @@ module.exports = {
           "specurl": "https://drafts.csswg.org/css-cascade/#all-shorthand"
         },
         {
+          "name": "willchange",
+          "title": "will-change",
+          "specurl": "https://drafts.csswg.org/css-will-change/"
+        },
+        {
           "name": "csscalc",
           "title": "CSS Calc",
           "specurl": ""
@@ -432,6 +437,11 @@ module.exports = {
           "name": "textalignlast",
           "title": "CSS text-align-last",
           "specurl": "https://developer.mozilla.org/en-US/docs/Web/CSS/text-align-last"
+        },
+        {
+          "name": "wrapflow",
+          "title": "CSS wrap-flow",
+          "specurl": "https://www.w3.org/TR/css3-exclusions"
         }
       ]
     },
@@ -552,24 +562,28 @@ module.exports = {
           ]
         },
         {
-          "name": "audioloop",
-          "title": "Audio Loop Attribute"
-        },
-        {
           "name": "video",
           "title": "HTML5 Video",
           "specurl": "http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#the-video-element",
           "subfeatures": [
             {
-              "name": "video-h264",
+              "name": "video.h264",
               "title": "H.264"
             },
             {
-              "name": "video-ogg",
+              "name": "video.hls",
+              "title": "hls"
+            },
+            {
+              "name": "video.ogg",
               "title": "Ogg"
             },
             {
-              "name": "video-webm",
+              "name": "video.vp9",
+              "title": "VP9"
+            },
+            {
+              "name": "video.webm",
               "title": "WebM"
             }
           ]
@@ -623,6 +637,11 @@ module.exports = {
           "name": "websockets",
           "title": "Web Sockets",
           "specurl": "http://dev.w3.org/html5/websockets/"
+        },
+        {
+          "name": "websocketsbinary",
+          "title": "Binary WebSockets",
+          "specurl": ""
         },
         {
           "name": "websqldatabase",
@@ -914,16 +933,6 @@ module.exports = {
           "specurl": "http://en.wikipedia.org/wiki/Emoji"
         },
         {
-          "name": "fullscreen",
-          "title": "Fullscreen API",
-          "specurl": "https://developer.mozilla.org/en/API/Fullscreen"
-        },
-        {
-          "name": "geolocation",
-          "title": "Geolocation API",
-          "specurl": "http://dev.w3.org/geo/api/spec-source.html"
-        },
-        {
           "name": "smil",
           "title": "SMIL",
           "specurl": "http://www.w3.org/TR/REC-smil/"
@@ -976,12 +985,128 @@ module.exports = {
         {
           "name": "webgl",
           "title": "WebGL",
-          "specurl": "http://www.khronos.org/registry/webgl/specs/latest/"
+          "specurl": "http://www.khronos.org/registry/webgl/specs/latest/",
+          "subfeatures": [
+            {
+              "name": "webglextensions.ANGLE_instanced_arrays",
+              "title": "webglextensions.ANGLE_instanced_arrays"
+            },
+            {
+              "name": "webglextensions.EXT_blend_minmax",
+              "title": "webglextensions.EXT_blend_minmax"
+            },
+            {
+              "name": "webglextensions.EXT_disjoint_timer_query",
+              "title": "webglextensions.EXT_disjoint_timer_query"
+            },
+            {
+              "name": "webglextensions.EXT_frag_depth",
+              "title": "webglextensions.EXT_frag_depth"
+            },
+            {
+              "name": "webglextensions.EXT_sRGB",
+              "title": "webglextensions.EXT_sRGB"
+            },
+            {
+              "name": "webglextensions.EXT_shader_texture_lod",
+              "title": "webglextensions.EXT_shader_texture_lod"
+            },
+            {
+              "name": "webglextensions.EXT_texture_filter_anisotropic",
+              "title": "webglextensions.EXT_texture_filter_anisotropic"
+            },
+            {
+              "name": "webglextensions.OES_element_index_uint",
+              "title": "webglextensions.OES_element_index_uint"
+            },
+            {
+              "name": "webglextensions.OES_standard_derivatives",
+              "title": "webglextensions.OES_standard_derivatives"
+            },
+            {
+              "name": "webglextensions.OES_texture_float",
+              "title": "webglextensions.OES_texture_float"
+            },
+            {
+              "name": "webglextensions.OES_texture_float_linear",
+              "title": "webglextensions.OES_texture_float_linear"
+            },
+            {
+              "name": "webglextensions.OES_texture_half_float",
+              "title": "webglextensions.OES_texture_half_float"
+            },
+            {
+              "name": "webglextensions.OES_texture_half_float_linear",
+              "title": "webglextensions.OES_texture_half_float_linear"
+            },
+            {
+              "name": "webglextensions.OES_vertex_array_object",
+              "title": "webglextensions.OES_vertex_array_object"
+            },
+            {
+              "name": "webglextensions.WEBGL_compressed_texture_etc1",
+              "title": "webglextensions.WEBGL_compressed_texture_etc1"
+            },
+            {
+              "name": "webglextensions.WEBGL_compressed_texture_s3tc",
+              "title": "webglextensions.WEBGL_compressed_texture_s3tc"
+            },
+            {
+              "name": "webglextensions.WEBGL_debug_renderer_info",
+              "title": "webglextensions.WEBGL_debug_renderer_info"
+            },
+            {
+              "name": "webglextensions.WEBGL_debug_shaders",
+              "title": "webglextensions.WEBGL_debug_shaders"
+            },
+            {
+              "name": "webglextensions.WEBGL_depth_texture",
+              "title": "webglextensions.WEBGL_depth_texture"
+            },
+            {
+              "name": "webglextensions.WEBGL_draw_buffers",
+              "title": "webglextensions.WEBGL_draw_buffers"
+            },
+            {
+              "name": "webglextensions.WEBGL_lose_context",
+              "title": "webglextensions.WEBGL_lose_context"
+            },
+            {
+              "name": "webglextensions.WEBKIT_EXT_texture_filter_anisotropic",
+              "title": "webglextensions.WEBKIT_EXT_texture_filter_anisotropic"
+            },
+            {
+              "name": "webglextensions.WEBKIT_WEBGL_compressed_texture_s3tc",
+              "title": "webglextensions.WEBKIT_WEBGL_compressed_texture_s3tc"
+            },
+            {
+              "name": "webglextensions.WEBKIT_WEBGL_depth_texture",
+              "title": "webglextensions.WEBKIT_WEBGL_depth_texture"
+            },
+            {
+              "name": "webglextensions.WEBKIT_WEBGL_lose_context",
+              "title": "webglextensions.WEBKIT_WEBGL_lose_context"
+            }
+          ]
         },
         {
           "name": "webp",
           "title": "WebP",
-          "specurl": "http://code.google.com/speed/webp/"
+          "specurl": "http://code.google.com/speed/webp/",
+          "subfeatures": [
+            {
+              "name": "webpalpha",
+              "title": "Webp Alpha"
+            },
+            {
+              "name": "webpanimation",
+              "title": "Webp Animation"
+            },
+            {
+              "name": "webplossless",
+              "title": "Webp Lossless"
+            }
+          ]
         },
         {
           "name": "ambientlight",
@@ -999,19 +1124,9 @@ module.exports = {
           "specurl": "https://www.w3.org/TR/html5/webappapis.html#windowbase64"
         },
         {
-          "name": "batteryapi",
-          "title": "Battery API",
-          "specurl": "https://developer.mozilla.org/en/DOM/window.navigator.mozBattery"
-        },
-        {
           "name": "lowbattery",
           "title": "Low Battery Level",
           "specurl": ""
-        },
-        {
-          "name": "beacon",
-          "title": "Beacon API",
-          "specurl": "https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/Beacon/Overview.html"
         },
         {
           "name": "fileapi",
@@ -1207,6 +1322,46 @@ module.exports = {
           "specurl": "https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html#tts-section"
         },
         {
+          "name": "vibrate",
+          "title": "Vibration API",
+          "specurl": "https://www.w3.org/TR/vibration/"
+        },
+        {
+          "name": "webanimations",
+          "title": "Web Animation API",
+          "specurl": ""
+        },
+        {
+          "name": "webaudio",
+          "title": "Web Audio API",
+          "specurl": "https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html"
+        },
+        {
+          "name": "fullscreen",
+          "title": "Fullscreen API",
+          "specurl": "https://developer.mozilla.org/en/API/Fullscreen"
+        },
+        {
+          "name": "geolocation",
+          "title": "Geolocation API",
+          "specurl": "http://dev.w3.org/geo/api/spec-source.html"
+        },
+        {
+          "name": "batteryapi",
+          "title": "Battery API",
+          "specurl": "https://developer.mozilla.org/en/DOM/window.navigator.mozBattery"
+        },
+        {
+          "name": "beacon",
+          "title": "Beacon API",
+          "specurl": "https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/Beacon/Overview.html"
+        },
+        {
+          "name": "webintents",
+          "title": "Web Intents API",
+          "specurl": ""
+        },
+        {
           "name": "jpeg2000",
           "title": "JPEG 2000",
           "specurl": ""
@@ -1302,6 +1457,21 @@ module.exports = {
           "specurl": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea"
         },
         {
+          "name": "audioloop",
+          "title": "audio[loop] Attribute",
+          "specurl": ""
+        },
+        {
+          "name": "videoloop",
+          "title": "video[loop] Attribute",
+          "specurl": ""
+        },
+        {
+          "name": "videopreload",
+          "title": "video[preload] Attribute",
+          "specurl": ""
+        },
+        {
           "name": "texttrackapi",
           "title": "Timed Text Track",
           "specurl": "http://www.w3.org/TR/html5/media-elements.html#text-track-api"
@@ -1324,6 +1494,71 @@ module.exports = {
         {
           "name": "unicode",
           "title": "Unicode characters",
+          "specurl": ""
+        },
+        {
+          "name": "unicoderange",
+          "title": "Unicode Range",
+          "specurl": "https://www.w3.org/TR/2013/CR-css-fonts-3-20131003/#descdef-unicode-range"
+        },
+        {
+          "name": "unknownelements",
+          "title": "Unknown Elements",
+          "specurl": ""
+        },
+        {
+          "name": "urlparser",
+          "title": "URL parser",
+          "specurl": "https://dvcs.w3.org/hg/url/raw-file/tip/Overview.html"
+        },
+        {
+          "name": "userdata",
+          "title": "IE User Data API",
+          "specurl": "https://msdn.microsoft.com/en-us/library/ms531424.aspx"
+        },
+        {
+          "name": "xdomainrequest",
+          "title": "XDomainRequest",
+          "specurl": "https://msdn.microsoft.com/library/ie/cc288060.aspx"
+        },
+        {
+          "name": "vml",
+          "title": "VML",
+          "specurl": "https://www.w3.org/TR/NOTE-VML"
+        },
+        {
+          "name": "xhr2",
+          "title": "XML HTTP Request Level 2 XHR2",
+          "specurl": "https://www.w3.org/TR/XMLHttpRequest2/"
+        },
+        {
+          "name": "xhrresponsetype",
+          "title": "XHR responseType",
+          "specurl": "https://xhr.spec.whatwg.org/#the-responsetype-attribute"
+        },
+        {
+          "name": "xhrresponsetypearraybuffer",
+          "title": "XHR responseType='arraybuffer'",
+          "specurl": ""
+        },
+        {
+          "name": "xhrresponsetypeblob",
+          "title": "XHR responseType='blob'",
+          "specurl": ""
+        },
+        {
+          "name": "xhrresponsetypedocument",
+          "title": "XHR responseType='document'",
+          "specurl": ""
+        },
+        {
+          "name": "xhrresponsetypejson",
+          "title": "XHR responseType='json'",
+          "specurl": ""
+        },
+        {
+          "name": "xhrresponsetypetext",
+          "title": "XHR responseType='text'",
           "specurl": ""
         }
       ]
