@@ -20,3 +20,24 @@ div.row
       Feature family hasn't been set yet for this profile.
 div.row.featureNote.
   <small><em>To learn more about families please <a href="https://github.com/dmolsen/Detector/wiki/Detector-Family-Tutorial">review the family tutorial</a>.</em></small>
+
+div.row
+  each featureGroup in capabilities.sections
+    div.group
+      div.features
+        h1= featureGroup.title
+        ul
+          each feature in featureGroup.features
+            li.feature
+              if feature.specurl
+                a(href=specurl class="title spec" title="Check the spec")= feature.title
+              else
+                span.title= feature.title
+
+              span(class='support' data-capability= feature.name)
+              if feature.subfeatures
+                ul.subfeatures
+                  each subfeature in feature.subfeatures
+                    li.feature
+                      span.title= subfeature.title
+                      span(class='support' data-capability= subfeature.name)

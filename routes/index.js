@@ -6,7 +6,8 @@ router.get('/', function(req, res) {
   var Browscap = require('browscap-js'),
     browscap = new Browscap(),
     ua = req.headers['user-agent'],
-    browser;
+    browser,
+    capabilities = require('../data/capabilities.js');
 
   console.log('User-Agent: ' + ua);
 
@@ -22,7 +23,8 @@ router.get('/', function(req, res) {
       devicename: browser['Device_Name'],
       mobile: browser['isMobileDevice'],
       tablet: browser['isTablet'],
-      bot: browser['Crawler']
+      bot: browser['Crawler'],
+      capabilities: capabilities
     }
   );
 });
