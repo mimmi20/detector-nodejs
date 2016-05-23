@@ -145,47 +145,47 @@ module.exports = {
           "specurl": "http://dev.w3.org/csswg/css3-multicol/",
           "subfeatures": [
             {
-              "name": "breakafter",
+              "name": "csscolumns.breakafter",
               "title": "breakafter"
             },
             {
-              "name": "breakbefore",
+              "name": "csscolumns.breakbefore",
               "title": "breakbefore"
             },
             {
-              "name": "breakinside",
+              "name": "csscolumns.breakinside",
               "title": "breakinside"
             },
             {
-              "name": "fill",
+              "name": "csscolumns.fill",
               "title": "fill"
             },
             {
-              "name": "gap",
+              "name": "csscolumns.gap",
               "title": "gap"
             },
             {
-              "name": "rule",
+              "name": "csscolumns.rule",
               "title": "rule"
             },
             {
-              "name": "rulecolor",
+              "name": "csscolumns.rulecolor",
               "title": "rulecolor"
             },
             {
-              "name": "rulestyle",
+              "name": "csscolumns.rulestyle",
               "title": "rulestyle"
             },
             {
-              "name": "rulewidth",
+              "name": "csscolumns.rulewidth",
               "title": "rulewidth"
             },
             {
-              "name": "span",
+              "name": "csscolumns.span",
               "title": "span"
             },
             {
-              "name": "width",
+              "name": "csscolumns.width",
               "title": "width"
             }
           ]
@@ -594,7 +594,7 @@ module.exports = {
           "specurl": "http://www.w3.org/TR/IndexedDB/",
           "subfeatures": [
             {
-              "name": "deletedatabase",
+              "name": "indexeddb.deletedatabase",
               "title": "deletedatabase"
             },
             {
@@ -730,57 +730,57 @@ module.exports = {
       "title": "Input Types",
       "features": [
         {
-          "name": "search",
+          "name": "inputtypes.search",
           "title": "search",
           "specurl": "http://dev.w3.org/html5/spec/Overview.html#text-state-and-search-state"
         },
         {
-          "name": "tel",
+          "name": "inputtypes.tel",
           "title": "tel",
           "specurl": "http://dev.w3.org/html5/spec/Overview.html#telephone-state"
         },
         {
-          "name": "url",
+          "name": "inputtypes.url",
           "title": "url",
           "specurl": "http://dev.w3.org/html5/spec/Overview.html#url-state"
         },
         {
-          "name": "email",
+          "name": "inputtypes.email",
           "title": "email",
           "specurl": "http://dev.w3.org/html5/spec/Overview.html#e-mail-state"
         },
         {
-          "name": "datetime",
+          "name": "inputtypes.datetime",
           "title": "datetime",
           "specurl": "http://dev.w3.org/html5/spec/Overview.html#date-and-time-state"
         },
         {
-          "name": "date",
+          "name": "inputtypes.date",
           "title": "date",
           "specurl": "http://dev.w3.org/html5/spec/Overview.html#date-state"
         },
         {
-          "name": "month",
+          "name": "inputtypes.month",
           "title": "month",
           "specurl": "http://dev.w3.org/html5/spec/Overview.html#month-state"
         },
         {
-          "name": "week",
+          "name": "inputtypes.week",
           "title": "week",
           "specurl": "http://dev.w3.org/html5/spec/Overview.html#week-state"
         },
         {
-          "name": "time",
+          "name": "inputtypes.time",
           "title": "time",
           "specurl": "http://dev.w3.org/html5/spec/Overview.html#time-state"
         },
         {
-          "name": "datetime-local",
+          "name": "inputtypes.datetime-local",
           "title": "datetime-local",
           "specurl": "http://dev.w3.org/html5/spec/Overview.html#local-date-and-time-state"
         },
         {
-          "name": "number",
+          "name": "inputtypes.number",
           "title": "number",
           "specurl": "http://dev.w3.org/html5/spec/Overview.html#number-state"
         },
@@ -790,12 +790,12 @@ module.exports = {
           "specurl": ""
         },
         {
-          "name": "range",
+          "name": "inputtypes.range",
           "title": "range",
           "specurl": "http://dev.w3.org/html5/spec/Overview.html#range-state"
         },
         {
-          "name": "color",
+          "name": "inputtypes.color",
           "title": "color",
           "specurl": "http://dev.w3.org/html5/spec/Overview.html#color-state"
         },
@@ -811,53 +811,53 @@ module.exports = {
       "title": "Input Attributes",
       "features": [
         {
-          "name": "autocomplete",
-          "title": "autocomplete",
+          "name": "input.autocomplete",
+          "title": "input[autocomplete] Attribute",
           "specurl": "http://dev.w3.org/html5/spec/Overview.html#the-autocomplete-attribute"
         },
         {
-          "name": "autofocus",
-          "title": "autofocus",
+          "name": "input.autofocus",
+          "title": "input[autofocus] Attribute",
           "specurl": "http://dev.w3.org/html5/spec/Overview.html#attr-fe-autofocus"
         },
         {
-          "name": "list",
-          "title": "list",
+          "name": "input.list",
+          "title": "input[list] Attribute",
           "specurl": "http://dev.w3.org/html5/spec/Overview.html#attr-input-list"
         },
         {
-          "name": "placeholder",
-          "title": "placeholder",
+          "name": "input.placeholder",
+          "title": "input[placeholder] Attribute",
           "specurl": "http://dev.w3.org/html5/spec/Overview.html#the-placeholder-attribute"
         },
         {
-          "name": "max",
-          "title": "max",
+          "name": "input.max",
+          "title": "input[max] Attribute",
           "specurl": "http://dev.w3.org/html5/spec/Overview.html#the-min-and-max-attributes"
         },
         {
-          "name": "min",
-          "title": "min",
+          "name": "input.min",
+          "title": "input[min] Attribute",
           "specurl": "http://dev.w3.org/html5/spec/Overview.html#the-min-and-max-attributes"
         },
         {
-          "name": "multiple",
-          "title": "multiple",
+          "name": "input.multiple",
+          "title": "input[multiple] Attribute",
           "specurl": "http://dev.w3.org/html5/spec/Overview.html#the-multiple-attribute"
         },
         {
-          "name": "pattern",
-          "title": "pattern",
+          "name": "input.pattern",
+          "title": "input[pattern] Attribute",
           "specurl": "http://dev.w3.org/html5/spec/Overview.html#the-pattern-attribute"
         },
         {
-          "name": "required",
-          "title": "required",
+          "name": "input.required",
+          "title": "input[required] Attribute",
           "specurl": "http://dev.w3.org/html5/spec/Overview.html#the-required-attribute"
         },
         {
-          "name": "step",
-          "title": "step",
+          "name": "input.step",
+          "title": "input[step] Attribute",
           "specurl": "http://dev.w3.org/html5/spec/Overview.html#the-step-attribute"
         },
         {
@@ -922,7 +922,7 @@ module.exports = {
           "specurl": "",
           "subfeatures": [
             {
-              "name": "over32kb",
+              "name": "datauri.over32kb",
               "title": "over32kb"
             }
           ]
@@ -966,11 +966,6 @@ module.exports = {
           "name": "svgforeignobject",
           "title": "SVG foreignObject",
           "specurl": "https://www.w3.org/TR/SVG11/extend.html"
-        },
-        {
-          "name": "touch",
-          "title": "Touch Events",
-          "specurl": "http://www.w3.org/TR/2011/WD-touch-events-20110505/"
         },
         {
           "name": "forcetouch",

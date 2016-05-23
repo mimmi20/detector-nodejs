@@ -110,6 +110,9 @@ var x = {
   "cssexunit": "t",
   "cssfilters": "t",
   "cssgradients": "t",
+  "csshyphens": "",
+  "softhyphens": "",
+  "softhyphensfind": "",
   "cssinvalid": "t",
   "cssmask": "t",
   "csspointerevents": "t",
@@ -166,8 +169,11 @@ var x = {
   "eventlistener": "t",
   "eventsource": "t",
   "exiforientation": "",
+  "draganddrop": "",
   "extended-emoji": "f",
   "fetch": "t",
+  "file": "",
+  "fileapi": "",
   "fileinput": "t",
   "fileinputdirectory": "t",
   "filereader": "t",
@@ -351,6 +357,7 @@ var x = {
   "webanimations": "t",
   "webaudio": "t",
   "webgl": "t",
+  "webglextensions": "",
   "webglextensions.ANGLE_instanced_arrays": "t",
   "webglextensions.EXT_blend_minmax": "t",
   "webglextensions.EXT_disjoint_timer_query": "",
@@ -423,7 +430,17 @@ for (var property in x) {
   var featureNameSplit = property.split('.');
 
   if (featureNameSplit.length === 1) {
-    result[property] = convert(m[property]);
+    if (typeof m[property] === 'object') {
+      for (var p in m[property]) {
+        if (!m[property].hasOwnProperty(p)) {
+          result[property + '.' + p] = 'u';
+        } else {
+          result[property + '.' + p] = convert(m[property][p]);
+        }
+      }
+    } else {
+      result[property] = convert(m[property]);
+    }
   } else {
     result[property] = convert(m[featureNameSplit[0]][featureNameSplit[1]]);
   }

@@ -25,16 +25,11 @@ div.row
       div.text-center.clearfix= featureGroup.title
       each feature in featureGroup.features
         div.clearfix
-          if feature.specurl
-            div.col-xs-6.col-sm-4.col-md-2.col-lg-2.col-xl-2.text-right
-              a.title.spec(href=specurl title="Check the spec")= feature.title
-          else
-            div.title.col-xs-6.col-sm-4.col-md-2.col-lg-2.col-xl-2.text-right= feature.title
-
-        div.col-xs-6.ol-sm-8.col-md-10.col-lg-10.col-xl-10(data-capability= feature.name)
+          div.col-xs-6.col-sm-4.col-md-4.col-lg-5.col-xl-4.text-right= feature.title
+          div.col-xs-6.ol-sm-8.col-md-8.col-lg-7.col-xl-8(data-capability= feature.name)
 
         if feature.subfeatures
           each subfeature in feature.subfeatures
             div.clearfix
-              div.title.col-xs-6.col-sm-4.col-md-2.col-lg-2.col-xl-2.text-right= subfeature.title
-              div.col-xs-6.ol-sm-8.col-md-10.col-lg-10.col-xl-10(data-capability= subfeature.name)
+              div.title.col-xs-6.col-sm-4.col-md-4.col-lg-5.col-xl-4.text-right= subfeature.title
+              div.col-xs-6.ol-sm-8.col-md-8.col-lg-7.col-xl-8(data-capability= subfeature.name)

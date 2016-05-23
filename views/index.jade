@@ -19,6 +19,37 @@ block content
     include ./partials/_moreinfo.jade
     include ./partials/_credits.jade
     include ./partials/_archive.jade
-
+  script(src='/javascripts/jquery-1.12.4.min.js')
   script(type='text/javascript').
-    jQuery(span[data-capability]).css({color:red});
+    jQuery('div[data-capability]').each(function() {
+      var data = this.dataset.capability;
+      //if (typeof m[data] === 'undefined') {
+      //  console.log(data + ' is unknown for modernizr');
+      //} else if (m[data]) {
+      //  console.log(m[data]);
+      //}
+      if (typeof result[data] !== 'undefined') {
+        switch (result[data]) {
+          case 't':
+            jQuery(this).html('<span class="label label-success">true</span>');
+            break;
+          case 'f':
+            jQuery(this).html('<span class="label label-danger">false</span>');
+            break;
+          case 'm':
+            jQuery(this).html('<span class="label label-warning">probably</span>');
+            break;
+          case 'p':
+            jQuery(this).html('<span class="label label-warning">maybe</span>');
+            break;
+          case 'u':
+            jQuery(this).html('<span class="label label-info">undefined</span>');
+            break;
+          default:
+            jQuery(this).html('<span class="label label-info">' + result[data] + '</span>');
+        }
+      } else {
+        console.log(data + ' is unknown for result');
+      }
+      //console.log(data);
+    });
