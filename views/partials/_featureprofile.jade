@@ -18,26 +18,23 @@ div.row
       family:
     div.col-xs-6.ol-sm-8.col-md-10.col-lg-10.col-xl-10.
       Feature family hasn't been set yet for this profile.
-div.row.featureNote.
-  <small><em>To learn more about families please <a href="https://github.com/dmolsen/Detector/wiki/Detector-Family-Tutorial">review the family tutorial</a>.</em></small>
 
 div.row
   each featureGroup in capabilities.sections
     div.group
-      div.features
-        h1= featureGroup.title
-        ul
-          each feature in featureGroup.features
-            li.feature
-              if feature.specurl
-                a(href=specurl class="title spec" title="Check the spec")= feature.title
-              else
-                span.title= feature.title
+      div.text-center.clearfix= featureGroup.title
+      each feature in featureGroup.features
+        div.clearfix
+          if feature.specurl
+            div.col-xs-6.col-sm-4.col-md-2.col-lg-2.col-xl-2.text-right
+              a.title.spec(href=specurl title="Check the spec")= feature.title
+          else
+            div.title.col-xs-6.col-sm-4.col-md-2.col-lg-2.col-xl-2.text-right= feature.title
 
-              span(class='support' data-capability= feature.name)
-              if feature.subfeatures
-                ul.subfeatures
-                  each subfeature in feature.subfeatures
-                    li.feature
-                      span.title= subfeature.title
-                      span(class='support' data-capability= subfeature.name)
+        div.col-xs-6.ol-sm-8.col-md-10.col-lg-10.col-xl-10(data-capability= feature.name)
+
+        if feature.subfeatures
+          each subfeature in feature.subfeatures
+            div.clearfix
+              div.title.col-xs-6.col-sm-4.col-md-2.col-lg-2.col-xl-2.text-right= subfeature.title
+              div.col-xs-6.ol-sm-8.col-md-10.col-lg-10.col-xl-10(data-capability= subfeature.name)
