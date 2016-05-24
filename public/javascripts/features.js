@@ -29,6 +29,8 @@ function convert(variable) {
     c = 'p';
   } else if (variable === 'maybe') {
     c = 'm';
+  } else if (variable === 'undefined') {
+    c = 'v';
   } else {
     c = variable;
   }
@@ -346,6 +348,7 @@ var x = {
   "userdata": "f",
   "userselect": "t",
   "vibrate": "t",
+  "video": "",
   "video.h264": "",
   "video.hls": "",
   "video.ogg": "",
@@ -415,22 +418,17 @@ for (var property in x) {
 
     continue;
   }
-  if (!m.hasOwnProperty(property)) {
-    result[property] = 'u';
 
-    continue;
-  }
-
-  t = typeof x[property];
-
-  if (t === 'object') {
-    continue;
-  }
+  result[property] = 'x';
 
   var featureNameSplit = property.split('.');
 
   if (featureNameSplit.length === 1) {
-    if (typeof m[property] === 'object') {
+    if (typeof m[property] === 'undefined') {
+      result[property] = 'u';
+    } else if (typeof m[property] === 'object') {
+      result[property] = convert(!!m[property]);
+
       for (var p in m[property]) {
         if (!m[property].hasOwnProperty(p)) {
           result[property + '.' + p] = 'u';
@@ -441,6 +439,10 @@ for (var property in x) {
     } else {
       result[property] = convert(m[property]);
     }
+  } else if (!m.hasOwnProperty(featureNameSplit[0]) || typeof m[featureNameSplit[0]] === 'undefined') {
+    result[property] = 'u';
+  } else if (!m[featureNameSplit[0]].hasOwnProperty(featureNameSplit[1]) || typeof m[featureNameSplit[0]][featureNameSplit[1]] === 'undefined') {
+    result[property] = 'u';
   } else {
     result[property] = convert(m[featureNameSplit[0]][featureNameSplit[1]]);
   }

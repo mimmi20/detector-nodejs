@@ -1696,11 +1696,6 @@ module.exports = {
           "specurl": ""
         },
         {
-          "name": "extended-emoji",
-          "title": "emoji detection",
-          "specurl": ""
-        },
-        {
           "name": "pr-screenattributes.colorDepth",
           "title": "colorDepth",
           "specurl": ""

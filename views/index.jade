@@ -19,15 +19,65 @@ block content
     include ./partials/_moreinfo.jade
     include ./partials/_credits.jade
     include ./partials/_archive.jade
+  script(type='text/javascript')
+    != 'document.write(JSON.stringify(m));document.write(JSON.stringify(result));'
   script(src='/javascripts/jquery-1.12.4.min.js')
   script(type='text/javascript').
     jQuery('div[data-capability]').each(function() {
-      var data = this.dataset.capability;
-      //if (typeof m[data] === 'undefined') {
-      //  console.log(data + ' is unknown for modernizr');
-      //} else if (m[data]) {
-      //  console.log(m[data]);
-      //}
+      var data = this.dataset.capability,
+          featureNameSplit = data.split('.'),
+          t = typeof result[data];
+
+      if (!result.hasOwnProperty(data) || t === 'undefined') {
+        jQuery(this).html('<span class="label label-info">undefined</span>');
+
+        return;
+      }
+
+      if (t === 'boolean') {
+        if (result[data]) {
+          jQuery(this).html('<span class="label label-success">true</span>');
+        } else {
+          jQuery(this).html('<span class="label label-danger">false</span>');
+        }
+
+        return;
+      }
+
+      if (result[data] === 't' || result[data] === true) {
+        jQuery(this).html('<span class="label label-success">true</span>');
+
+        return;
+      } else if (result[data] === 'f' || result[data] === false) {
+        jQuery(this).html('<span class="label label-danger">false</span>');
+
+        return;
+      } else if (result[data] === 'n' || result[data] === null) {
+        jQuery(this).html('<span class="label label-warning">null</span>');
+
+        return;
+      } else if (result[data] === 'e' || result[data] === '') {
+        jQuery(this).html('<span class="label label-danger">false</span>');
+
+        return;
+      } else if (result[data] === 'p' || result[data] === 'probably') {
+        jQuery(this).html('<span class="label label-warning">probably</span>');
+
+        return;
+      } else if (result[data] === 'm' || result[data] === 'maybe') {
+        jQuery(this).html('<span class="label label-warning">maybe</span>');
+
+        return;
+      } else if (result[data] === 'u') {
+        jQuery(this).html('<span class="label label-danger">false</span>');
+
+        return;
+      } else {
+        jQuery(this).html('<span class="label label-info">' + result[data] + '</span>');
+
+        return;
+      }
+
       if (typeof result[data] !== 'undefined') {
         switch (result[data]) {
           case 't':
@@ -43,13 +93,10 @@ block content
             jQuery(this).html('<span class="label label-warning">maybe</span>');
             break;
           case 'u':
-            jQuery(this).html('<span class="label label-info">undefined</span>');
+            jQuery(this).html('<span class="label label-info">undefined (u)</span>');
             break;
           default:
             jQuery(this).html('<span class="label label-info">' + result[data] + '</span>');
         }
-      } else {
-        console.log(data + ' is unknown for result');
       }
-      //console.log(data);
     });
