@@ -11,7 +11,6 @@ var methodOverride = require('method-override');
 var session = require('express-session');
 
 var routes = require('./routes/index');
-//var users = require('./routes/users');
 
 var app = express();
 
@@ -51,7 +50,6 @@ app.use(session({secret: 'mimmi20', resave: true, saveUninitialized: true}));
 app.use(csrf({ cookie: true }));
 
 app.use('/', routes);
-//app.use('/users', users);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {

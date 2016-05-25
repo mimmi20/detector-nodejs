@@ -1,0 +1,40 @@
+extends layout
+
+block styles
+  link(rel='stylesheet', href='/stylesheets/screen.css' media='screen, projection')
+  link(rel='stylesheet', href='/stylesheets/mobile.css' media='screen and (max-width: 768px)')
+  link(rel='stylesheet', href='/stylesheets/wide.css' media='screen and (min-width: 1400px)')
+
+block content
+  div#wrapper
+    header#header
+      <h1><img src="/images/logo.png" alt="haz.io" id="logo" /></h1>
+      <p>With the help of the awesome <a href="http://www.modernizr.com/">Modernizr</a> library, haz.io gives you a quick overview of your browser’s support for recent technologies in the world of HTML, CSS and Javascript.</p>
+    div(id='forkme')
+      a(href='https://github.com/mimmi20/detector-nodejs')!= '<img src="/images/ForkMe_Wht.png" width="141" height="141" alt="Fork Me on GitHub"/>'
+
+    div#features
+      each featureGroup in capabilities.sections
+        div.group
+          div.features
+            h1= featureGroup.title
+            ul
+              each feature in featureGroup.features
+                li.feature
+                  span.title= feature.title
+                  span(data-capability= feature.name)
+                  if feature.subfeatures
+                    ul.subfeatures
+                      each subfeature in feature.subfeatures
+                        li.feature
+                          span.title= subfeature.title
+                          span(data-capability= subfeature.name)
+
+  script(src='/javascripts/jquery-1.12.4.min.js' type='text/javascript')
+  script(src='/javascripts/show-capabilities-haz.js' type='text/javascript')
+
+block footer
+  footer.clearfix
+    p.
+      Created by <a href="http://pb.io/">Thomas Müller</a> as a nodeJs port of <a href="http://haz.io/">haz.io</a>.
+      Powered by <a href="http://modernizr.com/">Modernizr 3</a>.

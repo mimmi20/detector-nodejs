@@ -1,102 +1,41 @@
 extends layout
 
 block content
-  div.col-xs-12.col-sm-12.col-md-12.col-lg-9.col-xl-9
-    p.row.
-      With the initial release of <a href="http://yiibu.com/">Yiibu&apos;s</a> <a
-          href="https://github.com/yiibu/profile">Profile</a>, <a href="https://github.com/dmolsen/Detector">Detector</a>
-      is already <abbr title="Yet Another Browser- and Feature-Detection Library">YABFDL</abbr>
-      <em>(Yet Another Browser- and Feature-Detection Library)</em>. Ever since I heard Yiibu's talk,
-      <a href="http://www.slideshare.net/yiibu/adaptation-why-responsive-design-actually-begins-on-the-server">Adaptation</a>,
-      the core concepts & features of Detector have been floating around in my head. I've finally turned those
-      ideas into <a href="https://github.com/dmolsen/Detector">code</a> and created this demo.
-      To learn more about <a href="https://github.com/dmolsen/Detector">Detector</a> and how it works please check
-      out the <a href="https://github.com/dmolsen/Detector">README on GitHub</a>.
-    include ./partials/_browserprofile.jade
-    include ./partials/_featureprofile.jade
-  div.col-xs-12.col-sm-12.col-md-12.col-lg-3.col-xl-3
-    include ./partials/_about.jade
-    include ./partials/_moreinfo.jade
-    include ./partials/_credits.jade
-    include ./partials/_archive.jade
-  script(type='text/javascript')
-    != 'document.write(JSON.stringify(m));document.write(JSON.stringify(result));'
-  script(src='/javascripts/jquery-1.12.4.min.js')
-  script(type='text/javascript').
-    jQuery('div[data-capability]').each(function() {
-      var data = this.dataset.capability,
-          featureNameSplit = data.split('.'),
-          t = typeof result[data];
+  div.content.clearfix
+    div.page-header.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.clearfix
+      h1
+        a(href='/') Detector
+        span.label.notice.beta beta
+        small= ' combined browser- & feature-detection for your app '
+      div(id='forkme')
+        a(href='https://github.com/dmolsen/Detector')!= '<img src="/images/ForkMe_Wht.png" width="141" height="141" alt="Fork Me on GitHub"/>'
 
-      if (!result.hasOwnProperty(data) || t === 'undefined') {
-        jQuery(this).html('<span class="label label-info">undefined</span>');
+    div.row.clearfix
+      div.col-xs-12.col-sm-12.col-md-12.col-lg-9.col-xl-9
+        p.row.
+          With the initial release of <a href="http://yiibu.com/">Yiibu&apos;s</a> <a
+              href="https://github.com/yiibu/profile">Profile</a>, <a href="https://github.com/dmolsen/Detector">Detector</a>
+          is already <abbr title="Yet Another Browser- and Feature-Detection Library">YABFDL</abbr>
+          <em>(Yet Another Browser- and Feature-Detection Library)</em>. Ever since I heard Yiibu's talk,
+          <a href="http://www.slideshare.net/yiibu/adaptation-why-responsive-design-actually-begins-on-the-server">Adaptation</a>,
+          the core concepts & features of Detector have been floating around in my head. I've finally turned those
+          ideas into <a href="https://github.com/dmolsen/Detector">code</a> and created this demo.
+          To learn more about <a href="https://github.com/dmolsen/Detector">Detector</a> and how it works please check
+          out the <a href="https://github.com/dmolsen/Detector">README on GitHub</a>.
+        include ./partials/_browserprofile.jade
+        include ./partials/_featureprofile.jade
+      div.col-xs-12.col-sm-12.col-md-12.col-lg-3.col-xl-3
+        include ./partials/_about.jade
+        include ./partials/_moreinfo.jade
+        include ./partials/_credits.jade
+        include ./partials/_archive.jade
+  script(src='/javascripts/jquery-1.12.4.min.js' type='text/javascript')
+  script(src='/javascripts/show-capabilities.js' type='text/javascript')
 
-        return;
-      }
-
-      if (t === 'boolean') {
-        if (result[data]) {
-          jQuery(this).html('<span class="label label-success">true</span>');
-        } else {
-          jQuery(this).html('<span class="label label-danger">false</span>');
-        }
-
-        return;
-      }
-
-      if (result[data] === 't' || result[data] === true) {
-        jQuery(this).html('<span class="label label-success">true</span>');
-
-        return;
-      } else if (result[data] === 'f' || result[data] === false) {
-        jQuery(this).html('<span class="label label-danger">false</span>');
-
-        return;
-      } else if (result[data] === 'n' || result[data] === null) {
-        jQuery(this).html('<span class="label label-warning">null</span>');
-
-        return;
-      } else if (result[data] === 'e' || result[data] === '') {
-        jQuery(this).html('<span class="label label-danger">false</span>');
-
-        return;
-      } else if (result[data] === 'p' || result[data] === 'probably') {
-        jQuery(this).html('<span class="label label-warning">probably</span>');
-
-        return;
-      } else if (result[data] === 'm' || result[data] === 'maybe') {
-        jQuery(this).html('<span class="label label-warning">maybe</span>');
-
-        return;
-      } else if (result[data] === 'u') {
-        jQuery(this).html('<span class="label label-danger">false</span>');
-
-        return;
-      } else {
-        jQuery(this).html('<span class="label label-info">' + result[data] + '</span>');
-
-        return;
-      }
-
-      if (typeof result[data] !== 'undefined') {
-        switch (result[data]) {
-          case 't':
-            jQuery(this).html('<span class="label label-success">true</span>');
-            break;
-          case 'f':
-            jQuery(this).html('<span class="label label-danger">false</span>');
-            break;
-          case 'm':
-            jQuery(this).html('<span class="label label-warning">probably</span>');
-            break;
-          case 'p':
-            jQuery(this).html('<span class="label label-warning">maybe</span>');
-            break;
-          case 'u':
-            jQuery(this).html('<span class="label label-info">undefined (u)</span>');
-            break;
-          default:
-            jQuery(this).html('<span class="label label-info">' + result[data] + '</span>');
-        }
-      }
-    });
+block footer
+  footer.clearfix
+    p
+      != ' &copy; '
+      a(href='http://dmolsen.com/') Dave Olsen
+      != ' 2012 | Design based on '
+      a(href='http://twitter.github.com/bootstrap/') Bootstrap

@@ -866,11 +866,6 @@ module.exports = {
           "specurl": "https://www.w3.org/TR/html-media-capture/"
         },
         {
-          "name": "getusermedia",
-          "title": "getusermedia",
-          "specurl": "https://www.w3.org/TR/mediacapture-streams/"
-        },
-        {
           "name": "fileinputdirectory",
           "title": "input[directory] Attribute",
           "specurl": ""
@@ -1673,6 +1668,11 @@ module.exports = {
           "name": "peerconnection",
           "title": "RTC Peer Connection",
           "specurl": ""
+        },
+        {
+          "name": "getusermedia",
+          "title": "getusermedia",
+          "specurl": "https://www.w3.org/TR/mediacapture-streams/"
         }
       ]
     },
@@ -1711,18 +1711,8 @@ module.exports = {
           "specurl": ""
         },
         {
-          "name": "ps-cookies",
-          "title": "cookies",
-          "specurl": ""
-        },
-        {
           "name": "ps-hirescapable",
           "title": "hirescapable",
-          "specurl": ""
-        },
-        {
-          "name": "ps-ie8compat",
-          "title": "ie8compat",
           "specurl": ""
         },
         {
@@ -1738,16 +1728,6 @@ module.exports = {
         {
           "name": "ps-max-cookiedata-length",
           "title": "max cookiedata length",
-          "specurl": ""
-        },
-        {
-          "name": "ps-unicode",
-          "title": "unicode",
-          "specurl": ""
-        },
-        {
-          "name": "ps-webgl",
-          "title": "webgl",
           "specurl": ""
         }
       ]
