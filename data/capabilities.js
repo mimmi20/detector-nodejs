@@ -116,8 +116,13 @@ module.exports = {
         },
         {
           "name": "pointerevents",
-          "title": "pointer-events",
+          "title": "CSS Pointer Events",
           "specurl": "developer.mozilla.org/en/CSS/pointer-events"
+        },
+        {
+          "name": "csspointerevents",
+          "title": "CSS Pointer Events",
+          "specurl": ""
         },
         {
           "name": "rgba",
@@ -354,11 +359,6 @@ module.exports = {
           "specurl": ""
         },
         {
-          "name": "csspointerevents",
-          "title": "CSS Pointer Events",
-          "specurl": ""
-        },
-        {
           "name": "csspositionsticky",
           "title": "CSS position: sticky",
           "specurl": ""
@@ -446,14 +446,9 @@ module.exports = {
       ]
     },
     {
-      "name": "html5",
-      "title": "HTML5",
+      "name": "canvas",
+      "title": "canvas",
       "features": [
-        {
-          "name": "applicationcache",
-          "title": "Application Cache",
-          "specurl": "http://www.whatwg.org/specs/web-apps/current-work/multipage/offline.html"
-        },
         {
           "name": "canvas",
           "title": "Canvas",
@@ -488,52 +483,40 @@ module.exports = {
           "name": "todataurlwebp",
           "title": "canvas.toDataURL type support",
           "specurl": ""
+        }
+      ]
+    },
+    {
+      "name": "websockets",
+      "title": "Web Sockets",
+      "features": [
+        {
+          "name": "websockets",
+          "title": "Web Sockets",
+          "specurl": "http://dev.w3.org/html5/websockets/"
         },
         {
-          "name": "details",
-          "title": "<details>",
+          "name": "websocketsbinary",
+          "title": "Binary WebSockets",
           "specurl": ""
-        },
+        }
+      ]
+    },
+    {
+      "name": "a",
+      "title": "<a>",
+      "features": [
         {
-          "name": "devicemotion",
-          "title": "Device Motion Event",
-          "specurl": "http://dev.w3.org/geo/api/spec-source-orientation.html"
-        },
-        {
-          "name": "deviceorientation",
-          "title": "Device Orientation Event",
-          "specurl": "http://dev.w3.org/geo/api/spec-source-orientation.html"
-        },
-        {
-          "name": "exiforientation",
-          "title": "EXIF Orientation",
-          "specurl": ""
-        },
-        {
-          "name": "draganddrop",
-          "title": "Drag and Drop",
-          "specurl": "http://www.whatwg.org/specs/web-apps/current-work/multipage/dnd.html"
-        },
-        {
-          "name": "file",
-          "title": "File API",
-          "specurl": "http://dev.w3.org/2006/webapi/FileAPI/"
-        },
-        {
-          "name": "hashchange",
-          "title": "hashchange Event",
-          "specurl": "http://www.whatwg.org/specs/web-apps/current-work/multipage/webappapis.html#handler-window-onhashchange"
-        },
-        {
-          "name": "oninput",
-          "title": "onInput Event",
-          "specurl": "https://html.spec.whatwg.org/multipage/forms.html#common-input-element-attributes"
-        },
-        {
-          "name": "history",
-          "title": "History Management",
-          "specurl": "http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#the-history-interface"
-        },
+          "name": "adownload",
+          "title": "a[download] Attribute",
+          "specurl": "https://developers.whatwg.org/links.html#downloading-resources"
+        }
+      ]
+    },
+    {
+      "name": "audio",
+      "title": "<audio>",
+      "features": [
         {
           "name": "audio",
           "title": "HTML5 Audio",
@@ -562,6 +545,222 @@ module.exports = {
           ]
         },
         {
+          "name": "audioloop",
+          "title": "audio[loop] Attribute",
+          "specurl": ""
+        }
+      ]
+    },
+    {
+      "name": "bdi",
+      "title": "<bdi>",
+      "features": [
+        {
+          "name": "bdi",
+          "title": "<bdi> Element",
+          "specurl": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/bdi"
+        }
+      ]
+    },
+    {
+      "name": "datalist",
+      "title": "<datalist>",
+      "features": [
+        {
+          "name": "datalistelem",
+          "title": "datalist Element",
+          "specurl": ""
+        }
+      ]
+    },
+    {
+      "name": "details",
+      "title": "<details>",
+      "features": [
+        {
+          "name": "details",
+          "title": "details Element",
+          "specurl": ""
+        }
+      ]
+    },
+    {
+      "name": "form",
+      "title": "<form>",
+      "features": [
+        {
+          "name": "formvalidation",
+          "title": "Form Validation",
+          "specurl": ""
+        },
+        {
+          "name": "formvalidationapi",
+          "title": "Form Validation",
+          "specurl": ""
+        },
+        {
+          "name": "formvalidationmessage",
+          "title": "Form Validation message",
+          "specurl": ""
+        },
+        {
+          "name": "requestautocomplete",
+          "title": "form#requestAutocomplete()",
+          "specurl": "https://wiki.whatwg.org/wiki/RequestAutocomplete"
+        }
+      ]
+    },
+    {
+      "name": "iframe",
+      "title": "<iframe>",
+      "features": [
+        {
+          "name": "sandbox",
+          "title": "iframe[sandbox] Attribute",
+          "specurl": "https://html.spec.whatwg.org/multipage/embedded-content.html#attr-iframe-sandbox"
+        },
+        {
+          "name": "seamless",
+          "title": "iframe[seamless] Attribute",
+          "specurl": "https://html.spec.whatwg.org/multipage/embedded-content.html#attr-iframe-seamless"
+        },
+        {
+          "name": "srcdoc",
+          "title": "iframe[srcdoc] Attribute",
+          "specurl": "https://html.spec.whatwg.org/multipage/embedded-content.html#attr-iframe-srcdoc"
+        }
+      ]
+    },
+    {
+      "name": "img",
+      "title": "<img>",
+      "features": [
+        {
+          "name": "imgcrossorigin",
+          "title": "Image crossOrigin",
+          "specurl": ""
+        },
+        {
+          "name": "sizes",
+          "title": "img[sizes] Attribute",
+          "specurl": "http://picture.responsiveimages.org/#parse-sizes-attr"
+        },
+        {
+          "name": "srcset",
+          "title": "img[srcset] Attribute",
+          "specurl": ""
+        }
+      ]
+    },
+    {
+      "name": "meter",
+      "title": "<meter>",
+      "features": [
+        {
+          "name": "meter",
+          "title": "meter Element",
+          "specurl": ""
+        }
+      ]
+    },
+    {
+      "name": "output",
+      "title": "<output>",
+      "features": [
+        {
+          "name": "outputelem",
+          "title": "output Element",
+          "specurl": "https://html.spec.whatwg.org/multipage/forms.html#the-output-element"
+        }
+      ]
+    },
+    {
+      "name": "picture",
+      "title": "<picture>",
+      "features": [
+        {
+          "name": "picture",
+          "title": "picture Element",
+          "specurl": "http://picture.responsiveimages.org"
+        }
+      ]
+    },
+    {
+      "name": "progress",
+      "title": "<progress>",
+      "features": [
+        {
+          "name": "progressbar",
+          "title": "progress Element",
+          "specurl": ""
+        }
+      ]
+    },
+    {
+      "name": "ruby",
+      "title": "<ruby> <rp> <rt>",
+      "features": [
+        {
+          "name": "ruby",
+          "title": "ruby, rp, rt Elements",
+          "specurl": "https://html.spec.whatwg.org/multipage/semantics.html#the-ruby-element"
+        }
+      ]
+    },
+    {
+      "name": "script",
+      "title": "<script>",
+      "features": [
+        {
+          "name": "scriptasync",
+          "title": "script[async] Attribute",
+          "specurl": ""
+        },
+        {
+          "name": "scriptdefer",
+          "title": "script[defer] Attribute",
+          "specurl": ""
+        }
+      ]
+    },
+    {
+      "name": "style",
+      "title": "<style>",
+      "features": [
+        {
+          "name": "stylescoped",
+          "title": "style[scoped] Attribute",
+          "specurl": "https://html.spec.whatwg.org/multipage/semantics.html#attr-style-scoped"
+        }
+      ]
+    },
+    {
+      "name": "template",
+      "title": "<template>",
+      "features": [
+        {
+          "name": "template",
+          "title": "template Element",
+          "specurl": "https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/templates/index.html"
+        }
+      ]
+    },
+    {
+      "name": "textarea",
+      "title": "<textarea>",
+      "features": [
+        {
+          "name": "textareamaxlength",
+          "title": "textarea[maxlength] Attribute",
+          "specurl": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea"
+        }
+      ]
+    },
+    {
+      "name": "video",
+      "title": "<video>",
+      "features": [
+        {
           "name": "video",
           "title": "HTML5 Video",
           "specurl": "http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#the-video-element",
@@ -589,6 +788,37 @@ module.exports = {
           ]
         },
         {
+          "name": "videoloop",
+          "title": "video[loop] Attribute",
+          "specurl": ""
+        },
+        {
+          "name": "videopreload",
+          "title": "video[preload] Attribute",
+          "specurl": ""
+        }
+      ]
+    },
+    {
+      "name": "storage",
+      "title": "local/web Storage",
+      "features": [
+        {
+          "name": "localstorage",
+          "title": "local Storage",
+          "specurl": "http://dev.w3.org/html5/webstorage/#the-localstorage-attribute"
+        },
+        {
+          "name": "sessionstorage",
+          "title": "sessionStorage",
+          "specurl": "http://dev.w3.org/html5/webstorage/#the-sessionstorage-attribute"
+        },
+        {
+          "name": "websqldatabase",
+          "title": "Web SQL Database",
+          "specurl": "http://www.w3.org/TR/webdatabase/"
+        },
+        {
           "name": "indexeddb",
           "title": "IndexedDB",
           "specurl": "http://www.w3.org/TR/IndexedDB/",
@@ -604,14 +834,35 @@ module.exports = {
           ]
         },
         {
-          "name": "localstorage",
-          "title": "localStorage",
-          "specurl": "http://dev.w3.org/html5/webstorage/#the-localstorage-attribute"
+          "name": "quotamanagement",
+          "title": "Quota Storage Management API",
+          "specurl": "https://www.w3.org/TR/quota-api/"
+        }
+      ]
+    },
+    {
+      "name": "html5",
+      "title": "HTML5",
+      "features": [
+        {
+          "name": "applicationcache",
+          "title": "Application Cache",
+          "specurl": "http://www.whatwg.org/specs/web-apps/current-work/multipage/offline.html"
         },
         {
-          "name": "meter",
-          "title": "<meter>",
+          "name": "exiforientation",
+          "title": "EXIF Orientation",
           "specurl": ""
+        },
+        {
+          "name": "draganddrop",
+          "title": "Drag and Drop",
+          "specurl": "http://www.whatwg.org/specs/web-apps/current-work/multipage/dnd.html"
+        },
+        {
+          "name": "history",
+          "title": "History Management",
+          "specurl": "http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#the-history-interface"
         },
         {
           "name": "postmessage",
@@ -619,84 +870,9 @@ module.exports = {
           "specurl": "http://www.whatwg.org/specs/web-apps/current-work/multipage/comms.html#web-messaging"
         },
         {
-          "name": "progressbar",
-          "title": "<progress>",
-          "specurl": ""
-        },
-        {
-          "name": "sessionstorage",
-          "title": "sessionStorage",
-          "specurl": "http://dev.w3.org/html5/webstorage/#the-sessionstorage-attribute"
-        },
-        {
-          "name": "sharedworkers",
-          "title": "Shared Workers",
-          "specurl": "http://dev.w3.org/html5/workers/#shared-workers-introduction"
-        },
-        {
-          "name": "websockets",
-          "title": "Web Sockets",
-          "specurl": "http://dev.w3.org/html5/websockets/"
-        },
-        {
-          "name": "websocketsbinary",
-          "title": "Binary WebSockets",
-          "specurl": ""
-        },
-        {
-          "name": "websqldatabase",
-          "title": "Web SQL Database",
-          "specurl": "http://www.w3.org/TR/webdatabase/"
-        },
-        {
-          "name": "webworkers",
-          "title": "Web Workers",
-          "specurl": "http://www.whatwg.org/specs/web-apps/current-work/complete/workers.html"
-        },
-        {
           "name": "transferables",
           "title": "Transferables Objects",
           "specurl": ""
-        },
-        {
-          "name": "dataworkers",
-          "title": "Workers from Data URIs",
-          "specurl": "https://www.w3.org/TR/workers/"
-        },
-        {
-          "name": "serviceworker",
-          "title": "ServiceWorker API",
-          "specurl": ""
-        },
-        {
-          "name": "bdi",
-          "title": "<bdi> Element",
-          "specurl": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/bdi"
-        },
-        {
-          "name": "datalistelem",
-          "title": "datalist Element",
-          "specurl": ""
-        },
-        {
-          "name": "outputelem",
-          "title": "output Element",
-          "specurl": "https://html.spec.whatwg.org/multipage/forms.html#the-output-element"
-        },
-        {
-          "name": "picture",
-          "title": "picture Element",
-          "specurl": "http://picture.responsiveimages.org"
-        },
-        {
-          "name": "ruby",
-          "title": "ruby, rp, rt Elements",
-          "specurl": "https://html.spec.whatwg.org/multipage/semantics.html#the-ruby-element"
-        },
-        {
-          "name": "template",
-          "title": "template Element",
-          "specurl": "https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/templates/index.html"
         },
         {
           "name": "contextmenu",
@@ -912,17 +1088,6 @@ module.exports = {
           "specurl": ""
         },
         {
-          "name": "datauri",
-          "title": "data URIs",
-          "specurl": "",
-          "subfeatures": [
-            {
-              "name": "datauri.over32kb",
-              "title": "over32kb"
-            }
-          ]
-        },
-        {
           "name": "emoji",
           "title": "Emoji",
           "specurl": "http://en.wikipedia.org/wiki/Emoji"
@@ -933,45 +1098,186 @@ module.exports = {
           "specurl": "http://www.w3.org/TR/REC-smil/"
         },
         {
-          "name": "svg",
-          "title": "SVG",
-          "specurl": "http://www.w3.org/TR/SVG/"
+          "name": "atobbtoa",
+          "title": "Base 64 encoding/decoding",
+          "specurl": "https://www.w3.org/TR/html5/webappapis.html#windowbase64"
         },
         {
-          "name": "inlinesvg",
-          "title": "Inline SVG",
-          "specurl": "http://dev.w3.org/html5/spec/Overview.html#svg-0"
-        },
-        {
-          "name": "svgclippaths",
-          "title": "SVG Clip paths",
-          "specurl": "http://www.w3.org/TR/SVG/masking.html#ClipPathProperty"
-        },
-        {
-          "name": "svgasimg",
-          "title": "SVG Clip paths",
-          "specurl": "http://www.w3.org/TR/html5/embedded-content-0.html#the-img-element"
-        },
-        {
-          "name": "svgfilters",
-          "title": "SVG filters",
-          "specurl": "https://www.w3.org/TR/SVG11/filters.html"
-        },
-        {
-          "name": "svgforeignobject",
-          "title": "SVG foreignObject",
-          "specurl": "https://www.w3.org/TR/SVG11/extend.html"
-        },
-        {
-          "name": "forcetouch",
-          "title": "Force Touch Events",
+          "name": "lowbattery",
+          "title": "Low Battery Level",
           "specurl": ""
         },
         {
-          "name": "touchevents",
-          "title": "Touch Events",
-          "specurl": "https://www.w3.org/TR/2013/WD-touch-events-20130124/"
+          "name": "classlist",
+          "title": "classlist",
+          "specurl": "https://developer.mozilla.org/en/DOM/element.classList"
         },
+        {
+          "name": "contenteditable",
+          "title": "Content Editable",
+          "specurl": "https://html.spec.whatwg.org/multipage/interaction.html#contenteditable"
+        },
+        {
+          "name": "cors",
+          "title": "Cross-Origin Resource Sharing",
+          "specurl": ""
+        },
+        {
+          "name": "createelementattrs",
+          "title": "createElement with Attributes",
+          "specurl": ""
+        },
+        {
+          "name": "getrandomvalues",
+          "title": "getrandomvalues",
+          "specurl": "https://dvcs.w3.org/hg/webcrypto-api/raw-file/tip/spec/Overview.html#RandomSource-method-getRandomValues"
+        },
+        {
+          "name": "dart",
+          "title": "dart",
+          "specurl": "https://www.dartlang.org/"
+        },
+        {
+          "name": "dataview",
+          "title": "dataview API",
+          "specurl": ""
+        },
+        {
+          "name": "documentfragment",
+          "title": "Document Fragment",
+          "specurl": ""
+        },
+        {
+          "name": "flash",
+          "title": "Flash support",
+          "specurl": ""
+        },
+        {
+          "name": "framed",
+          "title": "Framed window",
+          "specurl": ""
+        },
+        {
+          "name": "hiddenscroll",
+          "title": "Hidden Scrollbar",
+          "specurl": ""
+        },
+        {
+          "name": "htmlimports",
+          "title": "HTML Imports",
+          "specurl": "https://w3c.github.io/webcomponents/spec/imports/"
+        },
+        {
+          "name": "ie8compat",
+          "title": "IE8 compat mode",
+          "specurl": ""
+        },
+        {
+          "name": "jpeg2000",
+          "title": "JPEG 2000",
+          "specurl": ""
+        },
+        {
+          "name": "jpegxr",
+          "title": "JPEG XR (extended range)",
+          "specurl": ""
+        },
+        {
+          "name": "json",
+          "title": "json",
+          "specurl": ""
+        },
+        {
+          "name": "lowbandwidth",
+          "title": "Low Bandwidth Connection",
+          "specurl": ""
+        },
+        {
+          "name": "matchmedia",
+          "title": "matchmedia",
+          "specurl": "https://drafts.csswg.org/cssom-view/#the-mediaquerylist-interface"
+        },
+        {
+          "name": "mathml",
+          "title": "MathML",
+          "specurl": "https://www.w3.org/Math/"
+        },
+        {
+          "name": "microdata",
+          "title": "microdata",
+          "specurl": "https://www.w3.org/TR/microdata/"
+        },
+        {
+          "name": "mutationobserver",
+          "title": "DOM4 MutationObserver",
+          "specurl": "https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver"
+        },
+        {
+          "name": "requestanimationframe",
+          "title": "requestanimationframe",
+          "specurl": "https://www.w3.org/TR/animation-timing/"
+        },
+        {
+          "name": "texttrackapi",
+          "title": "Timed Text Track",
+          "specurl": "http://www.w3.org/TR/html5/media-elements.html#text-track-api"
+        },
+        {
+          "name": "track",
+          "title": "Track element",
+          "specurl": "http://www.w3.org/TR/html5/video.html#the-track-element"
+        },
+        {
+          "name": "templatestrings",
+          "title": "Template strings",
+          "specurl": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings#Browser_compatibility"
+        },
+        {
+          "name": "typedarrays",
+          "title": "Typed arrays",
+          "specurl": "https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays"
+        },
+        {
+          "name": "unicode",
+          "title": "Unicode characters",
+          "specurl": ""
+        },
+        {
+          "name": "unicoderange",
+          "title": "Unicode Range",
+          "specurl": "https://www.w3.org/TR/2013/CR-css-fonts-3-20131003/#descdef-unicode-range"
+        },
+        {
+          "name": "unknownelements",
+          "title": "Unknown Elements",
+          "specurl": ""
+        },
+        {
+          "name": "urlparser",
+          "title": "URL parser",
+          "specurl": "https://dvcs.w3.org/hg/url/raw-file/tip/Overview.html"
+        },
+        {
+          "name": "userdata",
+          "title": "IE User Data API",
+          "specurl": "https://msdn.microsoft.com/en-us/library/ms531424.aspx"
+        },
+        {
+          "name": "xdomainrequest",
+          "title": "XDomainRequest",
+          "specurl": "https://msdn.microsoft.com/library/ie/cc288060.aspx"
+        },
+        {
+          "name": "vml",
+          "title": "VML",
+          "specurl": "https://www.w3.org/TR/NOTE-VML"
+        }
+      ]
+    },
+    {
+      "name": "webgl",
+      "title": "WebGL",
+      "features": [
         {
           "name": "webgl",
           "title": "WebGL",
@@ -1078,478 +1384,6 @@ module.exports = {
               "title": "webglextensions.WEBKIT_WEBGL_lose_context"
             }
           ]
-        },
-        {
-          "name": "webp",
-          "title": "WebP",
-          "specurl": "http://code.google.com/speed/webp/",
-          "subfeatures": [
-            {
-              "name": "webpalpha",
-              "title": "Webp Alpha"
-            },
-            {
-              "name": "webpanimation",
-              "title": "Webp Animation"
-            },
-            {
-              "name": "webplossless",
-              "title": "Webp Lossless"
-            }
-          ]
-        },
-        {
-          "name": "ambientlight",
-          "title": "Ambient Light Events",
-          "specurl": "https://www.w3.org/TR/ambient-light/"
-        },
-        {
-          "name": "apng",
-          "title": "Animated PNG",
-          "specurl": "https://en.wikipedia.org/wiki/APNG"
-        },
-        {
-          "name": "atobbtoa",
-          "title": "Base 64 encoding/decoding",
-          "specurl": "https://www.w3.org/TR/html5/webappapis.html#windowbase64"
-        },
-        {
-          "name": "lowbattery",
-          "title": "Low Battery Level",
-          "specurl": ""
-        },
-        {
-          "name": "fileapi",
-          "title": "File API",
-          "specurl": "https://www.w3.org/TR/FileAPI/#creating-revoking",
-          "subfeatures": [
-            {
-              "name": "blobconstructor",
-              "title": "Blob constructor"
-            },
-            {
-              "name": "bloburls",
-              "title": "Blob URLs"
-            },
-            {
-              "name": "blobworkers",
-              "title": "Workers from Blob URIs"
-            },
-            {
-              "name": "filereader",
-              "title": "filereader"
-            }
-          ]
-        },
-        {
-          "name": "filesystem",
-          "title": "Filesystem API",
-          "specurl": "http://dev.w3.org/2009/dap/file-system/file-dir-sys.html"
-        },
-        {
-          "name": "classlist",
-          "title": "classlist",
-          "specurl": "https://developer.mozilla.org/en/DOM/element.classList"
-        },
-        {
-          "name": "contenteditable",
-          "title": "Content Editable",
-          "specurl": "https://html.spec.whatwg.org/multipage/interaction.html#contenteditable"
-        },
-        {
-          "name": "cors",
-          "title": "Cross-Origin Resource Sharing",
-          "specurl": ""
-        },
-        {
-          "name": "createelementattrs",
-          "title": "createElement with Attributes",
-          "specurl": ""
-        },
-        {
-          "name": "crypto",
-          "title": "Web Cryptography API",
-          "specurl": "https://www.w3.org/TR/WebCryptoAPI/"
-        },
-        {
-          "name": "getrandomvalues",
-          "title": "getrandomvalues",
-          "specurl": "https://dvcs.w3.org/hg/webcrypto-api/raw-file/tip/spec/Overview.html#RandomSource-method-getRandomValues"
-        },
-        {
-          "name": "customevent",
-          "title": "customevent",
-          "specurl": ""
-        },
-        {
-          "name": "dart",
-          "title": "dart",
-          "specurl": "https://www.dartlang.org/"
-        },
-        {
-          "name": "dataview",
-          "title": "dataview API",
-          "specurl": ""
-        },
-        {
-          "name": "documentfragment",
-          "title": "Document Fragment",
-          "specurl": ""
-        },
-        {
-          "name": "eventlistener",
-          "title": "Event Listener",
-          "specurl": "https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Registration-interfaces"
-        },
-        {
-          "name": "eventsource",
-          "title": "Server Sent Events",
-          "specurl": "https://html.spec.whatwg.org/multipage/comms.html#server-sent-events"
-        },
-        {
-          "name": "fetch",
-          "title": "Fetch API",
-          "specurl": "https://fetch.spec.whatwg.org/"
-        },
-        {
-          "name": "flash",
-          "title": "Flash support",
-          "specurl": ""
-        },
-        {
-          "name": "formvalidation",
-          "title": "Form Validation",
-          "specurl": ""
-        },
-        {
-          "name": "formvalidationapi",
-          "title": "Form Validation",
-          "specurl": ""
-        },
-        {
-          "name": "formvalidationmessage",
-          "title": "Form Validation message",
-          "specurl": ""
-        },
-        {
-          "name": "requestautocomplete",
-          "title": "form#requestAutocomplete()",
-          "specurl": "https://wiki.whatwg.org/wiki/RequestAutocomplete"
-        },
-        {
-          "name": "framed",
-          "title": "Framed window",
-          "specurl": ""
-        },
-        {
-          "name": "gamepads",
-          "title": "GamePad API",
-          "specurl": "https://www.w3.org/TR/gamepad/"
-        },
-        {
-          "name": "hiddenscroll",
-          "title": "Hidden Scrollbar",
-          "specurl": ""
-        },
-        {
-          "name": "htmlimports",
-          "title": "HTML Imports",
-          "specurl": "https://w3c.github.io/webcomponents/spec/imports/"
-        },
-        {
-          "name": "ie8compat",
-          "title": "IE8 compat mode",
-          "specurl": ""
-        },
-        {
-          "name": "imgcrossorigin",
-          "title": "Image crossOrigin",
-          "specurl": ""
-        },
-        {
-          "name": "inputsearchevent",
-          "title": "input[search] search event",
-          "specurl": ""
-        },
-        {
-          "name": "intl",
-          "title": "Internationalization API",
-          "specurl": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl"
-        },
-        {
-          "name": "pagevisibility",
-          "title": "Page Visibility API",
-          "specurl": "https://www.w3.org/TR/2011/WD-page-visibility-20110602/"
-        },
-        {
-          "name": "performance",
-          "title": "Navigation Timing API",
-          "specurl": "https://www.w3.org/TR/navigation-timing/"
-        },
-        {
-          "name": "pointerlock",
-          "title": "Pointer Lock API",
-          "specurl": "https://developer.mozilla.org/en-US/docs/API/Pointer_Lock_API"
-        },
-        {
-          "name": "proximity",
-          "title": "Proximity API",
-          "specurl": "https://www.w3.org/TR/proximity/"
-        },
-        {
-          "name": "quotamanagement",
-          "title": "Quota Storage Management API",
-          "specurl": "https://www.w3.org/TR/quota-api/"
-        },
-        {
-          "name": "speechrecognition",
-          "title": "Speech Recognition API",
-          "specurl": "https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html#speechreco-section"
-        },
-        {
-          "name": "speechsynthesis",
-          "title": "Speech Synthesis API",
-          "specurl": "https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html#tts-section"
-        },
-        {
-          "name": "vibrate",
-          "title": "Vibration API",
-          "specurl": "https://www.w3.org/TR/vibration/"
-        },
-        {
-          "name": "webanimations",
-          "title": "Web Animation API",
-          "specurl": ""
-        },
-        {
-          "name": "webaudio",
-          "title": "Web Audio API",
-          "specurl": "https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html"
-        },
-        {
-          "name": "fullscreen",
-          "title": "Fullscreen API",
-          "specurl": "https://developer.mozilla.org/en/API/Fullscreen"
-        },
-        {
-          "name": "geolocation",
-          "title": "Geolocation API",
-          "specurl": "http://dev.w3.org/geo/api/spec-source.html"
-        },
-        {
-          "name": "batteryapi",
-          "title": "Battery API",
-          "specurl": "https://developer.mozilla.org/en/DOM/window.navigator.mozBattery"
-        },
-        {
-          "name": "beacon",
-          "title": "Beacon API",
-          "specurl": "https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/Beacon/Overview.html"
-        },
-        {
-          "name": "webintents",
-          "title": "Web Intents API",
-          "specurl": ""
-        },
-        {
-          "name": "jpeg2000",
-          "title": "JPEG 2000",
-          "specurl": ""
-        },
-        {
-          "name": "jpegxr",
-          "title": "JPEG XR (extended range)",
-          "specurl": ""
-        },
-        {
-          "name": "json",
-          "title": "json",
-          "specurl": ""
-        },
-        {
-          "name": "lowbandwidth",
-          "title": "Low Bandwidth Connection",
-          "specurl": ""
-        },
-        {
-          "name": "matchmedia",
-          "title": "matchmedia",
-          "specurl": "https://drafts.csswg.org/cssom-view/#the-mediaquerylist-interface"
-        },
-        {
-          "name": "mathml",
-          "title": "MathML",
-          "specurl": "https://www.w3.org/Math/"
-        },
-        {
-          "name": "microdata",
-          "title": "microdata",
-          "specurl": "https://www.w3.org/TR/microdata/"
-        },
-        {
-          "name": "mutationobserver",
-          "title": "DOM4 MutationObserver",
-          "specurl": "https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver"
-        },
-        {
-          "name": "requestanimationframe",
-          "title": "requestanimationframe",
-          "specurl": "https://www.w3.org/TR/animation-timing/"
-        },
-        {
-          "name": "sandbox",
-          "title": "iframe[sandbox] Attribute",
-          "specurl": "https://html.spec.whatwg.org/multipage/embedded-content.html#attr-iframe-sandbox"
-        },
-        {
-          "name": "seamless",
-          "title": "iframe[seamless] Attribute",
-          "specurl": "https://html.spec.whatwg.org/multipage/embedded-content.html#attr-iframe-seamless"
-        },
-        {
-          "name": "srcdoc",
-          "title": "iframe[srcdoc] Attribute",
-          "specurl": "https://html.spec.whatwg.org/multipage/embedded-content.html#attr-iframe-srcdoc"
-        },
-        {
-          "name": "scriptasync",
-          "title": "script[async] Attribute",
-          "specurl": ""
-        },
-        {
-          "name": "scriptdefer",
-          "title": "script[defer] Attribute",
-          "specurl": ""
-        },
-        {
-          "name": "adownload",
-          "title": "a[download] Attribute",
-          "specurl": "https://developers.whatwg.org/links.html#downloading-resources"
-        },
-        {
-          "name": "sizes",
-          "title": "img[sizes] Attribute",
-          "specurl": "http://picture.responsiveimages.org/#parse-sizes-attr"
-        },
-        {
-          "name": "srcset",
-          "title": "img[srcset] Attribute",
-          "specurl": ""
-        },
-        {
-          "name": "stylescoped",
-          "title": "style[scoped] Attribute",
-          "specurl": "https://html.spec.whatwg.org/multipage/semantics.html#attr-style-scoped"
-        },
-        {
-          "name": "textareamaxlength",
-          "title": "textarea[maxlength] Attribute",
-          "specurl": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea"
-        },
-        {
-          "name": "audioloop",
-          "title": "audio[loop] Attribute",
-          "specurl": ""
-        },
-        {
-          "name": "videoloop",
-          "title": "video[loop] Attribute",
-          "specurl": ""
-        },
-        {
-          "name": "videopreload",
-          "title": "video[preload] Attribute",
-          "specurl": ""
-        },
-        {
-          "name": "texttrackapi",
-          "title": "Timed Text Track",
-          "specurl": "http://www.w3.org/TR/html5/media-elements.html#text-track-api"
-        },
-        {
-          "name": "track",
-          "title": "Track element",
-          "specurl": "http://www.w3.org/TR/html5/video.html#the-track-element"
-        },
-        {
-          "name": "templatestrings",
-          "title": "Template strings",
-          "specurl": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings#Browser_compatibility"
-        },
-        {
-          "name": "typedarrays",
-          "title": "Typed arrays",
-          "specurl": "https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays"
-        },
-        {
-          "name": "unicode",
-          "title": "Unicode characters",
-          "specurl": ""
-        },
-        {
-          "name": "unicoderange",
-          "title": "Unicode Range",
-          "specurl": "https://www.w3.org/TR/2013/CR-css-fonts-3-20131003/#descdef-unicode-range"
-        },
-        {
-          "name": "unknownelements",
-          "title": "Unknown Elements",
-          "specurl": ""
-        },
-        {
-          "name": "urlparser",
-          "title": "URL parser",
-          "specurl": "https://dvcs.w3.org/hg/url/raw-file/tip/Overview.html"
-        },
-        {
-          "name": "userdata",
-          "title": "IE User Data API",
-          "specurl": "https://msdn.microsoft.com/en-us/library/ms531424.aspx"
-        },
-        {
-          "name": "xdomainrequest",
-          "title": "XDomainRequest",
-          "specurl": "https://msdn.microsoft.com/library/ie/cc288060.aspx"
-        },
-        {
-          "name": "vml",
-          "title": "VML",
-          "specurl": "https://www.w3.org/TR/NOTE-VML"
-        },
-        {
-          "name": "xhr2",
-          "title": "XML HTTP Request Level 2 XHR2",
-          "specurl": "https://www.w3.org/TR/XMLHttpRequest2/"
-        },
-        {
-          "name": "xhrresponsetype",
-          "title": "XHR responseType",
-          "specurl": "https://xhr.spec.whatwg.org/#the-responsetype-attribute"
-        },
-        {
-          "name": "xhrresponsetypearraybuffer",
-          "title": "XHR responseType='arraybuffer'",
-          "specurl": ""
-        },
-        {
-          "name": "xhrresponsetypeblob",
-          "title": "XHR responseType='blob'",
-          "specurl": ""
-        },
-        {
-          "name": "xhrresponsetypedocument",
-          "title": "XHR responseType='document'",
-          "specurl": ""
-        },
-        {
-          "name": "xhrresponsetypejson",
-          "title": "XHR responseType='json'",
-          "specurl": ""
-        },
-        {
-          "name": "xhrresponsetypetext",
-          "title": "XHR responseType='text'",
-          "specurl": ""
         }
       ]
     },
@@ -1656,6 +1490,139 @@ module.exports = {
       ]
     },
     {
+      "name": "webworkers",
+      "title": "Web Workers",
+      "features": [
+        {
+          "name": "webworkers",
+          "title": "Web Workers",
+          "specurl": "http://www.whatwg.org/specs/web-apps/current-work/complete/workers.html"
+        },
+        {
+          "name": "dataworkers",
+          "title": "Workers from Data URIs",
+          "specurl": "https://www.w3.org/TR/workers/"
+        },
+        {
+          "name": "serviceworker",
+          "title": "ServiceWorker API",
+          "specurl": ""
+        },
+        {
+          "name": "sharedworkers",
+          "title": "Shared Workers",
+          "specurl": "http://dev.w3.org/html5/workers/#shared-workers-introduction"
+        },
+        {
+          "name": "blobworkers",
+          "title": "Workers from Blob URIs",
+          "specurl": ""
+        }
+      ]
+    },
+    {
+      "name": "events",
+      "title": "Events",
+      "features": [
+        {
+          "name": "devicemotion",
+          "title": "Device Motion Event",
+          "specurl": "http://dev.w3.org/geo/api/spec-source-orientation.html"
+        },
+        {
+          "name": "deviceorientation",
+          "title": "Device Orientation Event",
+          "specurl": "http://dev.w3.org/geo/api/spec-source-orientation.html"
+        },
+        {
+          "name": "hashchange",
+          "title": "hashchange Event",
+          "specurl": "http://www.whatwg.org/specs/web-apps/current-work/multipage/webappapis.html#handler-window-onhashchange"
+        },
+        {
+          "name": "oninput",
+          "title": "onInput Event",
+          "specurl": "https://html.spec.whatwg.org/multipage/forms.html#common-input-element-attributes"
+        },
+        {
+          "name": "forcetouch",
+          "title": "Force Touch Events",
+          "specurl": ""
+        },
+        {
+          "name": "touchevents",
+          "title": "Touch Events",
+          "specurl": "https://www.w3.org/TR/2013/WD-touch-events-20130124/"
+        },
+        {
+          "name": "ambientlight",
+          "title": "Ambient Light Events",
+          "specurl": "https://www.w3.org/TR/ambient-light/"
+        },
+        {
+          "name": "customevent",
+          "title": "customevent",
+          "specurl": ""
+        },
+        {
+          "name": "eventlistener",
+          "title": "Event Listener",
+          "specurl": "https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Registration-interfaces"
+        },
+        {
+          "name": "eventsource",
+          "title": "Server Sent Events",
+          "specurl": "https://html.spec.whatwg.org/multipage/comms.html#server-sent-events"
+        },
+        {
+          "name": "inputsearchevent",
+          "title": "input[search] search event",
+          "specurl": ""
+        }
+      ]
+    },
+    {
+      "name": "images",
+      "title": "Images",
+      "features": [
+        {
+          "name": "webp",
+          "title": "WebP",
+          "specurl": "http://code.google.com/speed/webp/",
+          "subfeatures": [
+            {
+              "name": "webpalpha",
+              "title": "Webp Alpha"
+            },
+            {
+              "name": "webpanimation",
+              "title": "Webp Animation"
+            },
+            {
+              "name": "webplossless",
+              "title": "Webp Lossless"
+            }
+          ]
+        },
+        {
+          "name": "apng",
+          "title": "Animated PNG",
+          "specurl": "https://en.wikipedia.org/wiki/APNG"
+        },
+        {
+          "name": "datauri",
+          "title": "data URIs",
+          "specurl": "",
+          "subfeatures": [
+            {
+              "name": "datauri.over32kb",
+              "title": "over32kb"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "webrtc",
       "title": "Web RTC",
       "features": [
@@ -1673,6 +1640,208 @@ module.exports = {
           "name": "getusermedia",
           "title": "getusermedia",
           "specurl": "https://www.w3.org/TR/mediacapture-streams/"
+        }
+      ]
+    },
+    {
+      "name": "api",
+      "title": "APIs",
+      "features": [
+        {
+          "name": "fileapi",
+          "title": "File API",
+          "specurl": "https://www.w3.org/TR/FileAPI/#creating-revoking",
+          "subfeatures": [
+            {
+              "name": "file",
+              "title": "File API",
+              "specurl": "http://dev.w3.org/2006/webapi/FileAPI/"
+            },
+            {
+              "name": "blobconstructor",
+              "title": "Blob constructor"
+            },
+            {
+              "name": "bloburls",
+              "title": "Blob URLs"
+            },
+            {
+              "name": "filereader",
+              "title": "filereader"
+            }
+          ]
+        },
+        {
+          "name": "filesystem",
+          "title": "Filesystem API",
+          "specurl": "http://dev.w3.org/2009/dap/file-system/file-dir-sys.html"
+        },
+        {
+          "name": "crypto",
+          "title": "Web Cryptography API",
+          "specurl": "https://www.w3.org/TR/WebCryptoAPI/"
+        },
+        {
+          "name": "fetch",
+          "title": "Fetch API",
+          "specurl": "https://fetch.spec.whatwg.org/"
+        },
+        {
+          "name": "gamepads",
+          "title": "GamePad API",
+          "specurl": "https://www.w3.org/TR/gamepad/"
+        },
+        {
+          "name": "intl",
+          "title": "Internationalization API",
+          "specurl": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl"
+        },
+        {
+          "name": "pagevisibility",
+          "title": "Page Visibility API",
+          "specurl": "https://www.w3.org/TR/2011/WD-page-visibility-20110602/"
+        },
+        {
+          "name": "performance",
+          "title": "Navigation Timing API",
+          "specurl": "https://www.w3.org/TR/navigation-timing/"
+        },
+        {
+          "name": "pointerlock",
+          "title": "Pointer Lock API",
+          "specurl": "https://developer.mozilla.org/en-US/docs/API/Pointer_Lock_API"
+        },
+        {
+          "name": "proximity",
+          "title": "Proximity API",
+          "specurl": "https://www.w3.org/TR/proximity/"
+        },
+        {
+          "name": "speechrecognition",
+          "title": "Speech Recognition API",
+          "specurl": "https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html#speechreco-section"
+        },
+        {
+          "name": "speechsynthesis",
+          "title": "Speech Synthesis API",
+          "specurl": "https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html#tts-section"
+        },
+        {
+          "name": "vibrate",
+          "title": "Vibration API",
+          "specurl": "https://www.w3.org/TR/vibration/"
+        },
+        {
+          "name": "webanimations",
+          "title": "Web Animation API",
+          "specurl": ""
+        },
+        {
+          "name": "webaudio",
+          "title": "Web Audio API",
+          "specurl": "https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html"
+        },
+        {
+          "name": "fullscreen",
+          "title": "Fullscreen API",
+          "specurl": "https://developer.mozilla.org/en/API/Fullscreen"
+        },
+        {
+          "name": "geolocation",
+          "title": "Geolocation API",
+          "specurl": "http://dev.w3.org/geo/api/spec-source.html"
+        },
+        {
+          "name": "batteryapi",
+          "title": "Battery API",
+          "specurl": "https://developer.mozilla.org/en/DOM/window.navigator.mozBattery"
+        },
+        {
+          "name": "beacon",
+          "title": "Beacon API",
+          "specurl": "https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/Beacon/Overview.html"
+        },
+        {
+          "name": "webintents",
+          "title": "Web Intents API",
+          "specurl": ""
+        }
+      ]
+    },
+    {
+      "name": "svg",
+      "title": "SVG",
+      "features": [
+        {
+          "name": "svg",
+          "title": "SVG",
+          "specurl": "http://www.w3.org/TR/SVG/"
+        },
+        {
+          "name": "inlinesvg",
+          "title": "Inline SVG",
+          "specurl": "http://dev.w3.org/html5/spec/Overview.html#svg-0"
+        },
+        {
+          "name": "svgclippaths",
+          "title": "SVG Clip paths",
+          "specurl": "http://www.w3.org/TR/SVG/masking.html#ClipPathProperty"
+        },
+        {
+          "name": "svgasimg",
+          "title": "SVG as image",
+          "specurl": "http://www.w3.org/TR/html5/embedded-content-0.html#the-img-element"
+        },
+        {
+          "name": "svgfilters",
+          "title": "SVG filters",
+          "specurl": "https://www.w3.org/TR/SVG11/filters.html"
+        },
+        {
+          "name": "svgforeignobject",
+          "title": "SVG foreignObject",
+          "specurl": "https://www.w3.org/TR/SVG11/extend.html"
+        }
+      ]
+    },
+    {
+      "name": "xhr",
+      "title": "XML HTTP Request",
+      "features": [
+        {
+          "name": "xhr2",
+          "title": "XML HTTP Request Level 2 XHR2",
+          "specurl": "https://www.w3.org/TR/XMLHttpRequest2/"
+        },
+        {
+          "name": "xhrresponsetype",
+          "title": "XHR responseType",
+          "specurl": "https://xhr.spec.whatwg.org/#the-responsetype-attribute"
+        },
+        {
+          "name": "xhrresponsetypearraybuffer",
+          "title": "XHR responseType='arraybuffer'",
+          "specurl": ""
+        },
+        {
+          "name": "xhrresponsetypeblob",
+          "title": "XHR responseType='blob'",
+          "specurl": ""
+        },
+        {
+          "name": "xhrresponsetypedocument",
+          "title": "XHR responseType='document'",
+          "specurl": ""
+        },
+        {
+          "name": "xhrresponsetypejson",
+          "title": "XHR responseType='json'",
+          "specurl": ""
+        },
+        {
+          "name": "xhrresponsetypetext",
+          "title": "XHR responseType='text'",
+          "specurl": ""
         }
       ]
     },

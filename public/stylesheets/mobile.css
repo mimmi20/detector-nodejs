@@ -26,7 +26,7 @@ body {
     float: none
 }
 
-.features li .title {
+.group li .title {
     padding-top: 0.5em;
     padding-bottom: 0.5em
 }

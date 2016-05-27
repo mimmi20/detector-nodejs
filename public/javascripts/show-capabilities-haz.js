@@ -4,51 +4,51 @@ jQuery('span[data-capability]').each(function() {
     t = typeof result[data];
 
   if (!result.hasOwnProperty(data) || t === 'undefined') {
-    jQuery(this).html('<span class="label label-info support support-no">undefined</span>');
+    jQuery(this).addClass('label label-info support').html('undefined');
 
     return;
   }
 
   if (t === 'boolean') {
     if (result[data]) {
-      jQuery(this).html('<span class="label label-success support support-yes">true</span>');
+      jQuery(this).addClass('label label-success support').html('true');
     } else {
-      jQuery(this).html('<span class="label label-danger support support-no">false</span>');
+      jQuery(this).addClass('label label-danger support').html('false');
     }
 
     return;
   }
 
   if (result[data] === 't' || result[data] === true) {
-    jQuery(this).html('<span class="label label-success support support-yes">true</span>');
+    jQuery(this).addClass('label label-success support').html('true');
 
     return;
   } else if (result[data] === 'f' || result[data] === false) {
-    jQuery(this).html('<span class="label label-danger support support-no">false</span>');
+    jQuery(this).addClass('label label-danger support').html('false');
 
     return;
   } else if (result[data] === 'n' || result[data] === null) {
-    jQuery(this).html('<span class="label label-warning support support-no">null</span>');
+    jQuery(this).addClass('label label-warning support').html('null');
 
     return;
   } else if (result[data] === 'e' || result[data] === '') {
-    jQuery(this).html('<span class="label label-danger support support-no">false</span>');
+    jQuery(this).addClass('label label-danger support').html('false');
 
     return;
   } else if (result[data] === 'p' || result[data] === 'probably') {
-    jQuery(this).html('<span class="label label-warning support support-probably">probably</span>');
+    jQuery(this).addClass('label label-warning support').html('probably');
 
     return;
   } else if (result[data] === 'm' || result[data] === 'maybe') {
-    jQuery(this).html('<span class="label label-warning support support-maybe">maybe</span>');
+    jQuery(this).addClass('label label-warning support').html('maybe');
 
     return;
   } else if (result[data] === 'u') {
-    jQuery(this).html('<span class="label label-danger support support-no">false</span>');
+    jQuery(this).addClass('label label-danger support').html('n/a');
 
     return;
   } else {
-    jQuery(this).html('<span class="label label-info support">' + result[data] + '</span>');
+    jQuery(this).addClass('label label-info support').html(result[data]);
 
     return;
   }
@@ -56,22 +56,22 @@ jQuery('span[data-capability]').each(function() {
   if (typeof result[data] !== 'undefined') {
     switch (result[data]) {
       case 't':
-        jQuery(this).html('<span class="label label-success support support-yes">true</span>');
+        jQuery(this).addClass('label label-success support').html('true');
         break;
       case 'f':
-        jQuery(this).html('<span class="label label-danger support support-no">false</span>');
+        jQuery(this).addClass('label label-danger support').html('false');
         break;
       case 'p':
-        jQuery(this).html('<span class="label label-warning support support-probably">probably</span>');
+        jQuery(this).addClass('label label-warning support').html('probably');
         break;
       case 'm':
-        jQuery(this).html('<span class="label label-warning support support-maybe">maybe</span>');
+        jQuery(this).addClass('label label-warning support').html('maybe');
         break;
       case 'u':
-        jQuery(this).html('<span class="label label-info support">undefined (u)</span>');
+        jQuery(this).addClass('label label-info support').html('undefined');
         break;
       default:
-        jQuery(this).html('<span class="label label-info support">' + result[data] + '</span>');
+        jQuery(this).addClass('label label-info support').html(result[data]);
     }
   }
 });

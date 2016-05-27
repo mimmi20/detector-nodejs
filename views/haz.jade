@@ -16,19 +16,18 @@ block content
     div#features
       each featureGroup in capabilities.sections
         div.group
-          div.features
-            h1= featureGroup.title
-            ul
-              each feature in featureGroup.features
-                li.feature
-                  span.title= feature.title
-                  span(data-capability= feature.name)
-                  if feature.subfeatures
-                    ul.subfeatures
-                      each subfeature in feature.subfeatures
-                        li.feature
-                          span.title= subfeature.title
-                          span(data-capability= subfeature.name)
+          h1= featureGroup.title
+          ul
+            each feature in featureGroup.features
+              li.feature
+                span.title= feature.title
+                span(data-capability= feature.name)
+                if feature.subfeatures
+                  ul.subfeatures
+                    each subfeature in feature.subfeatures
+                      li.feature
+                        span.title= subfeature.title
+                        span(data-capability= subfeature.name)
 
   script(src='/javascripts/jquery-1.12.4.min.js' type='text/javascript')
   script(src='/javascripts/show-capabilities-haz.js' type='text/javascript')

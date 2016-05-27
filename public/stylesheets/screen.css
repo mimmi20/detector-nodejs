@@ -45,7 +45,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 body {
     background-image: url('/images/bg.png?1311440663');
-    background-color: #78b814;
+    background-color: #82D200;
     background-position: top center;
     color: #fff;
     font-family: "Droid Sans", sans-serif;
@@ -114,8 +114,14 @@ p.info {
     width: 30%;
     display: inline;
     float: left;
-    padding: 0 1.5%;
-    margin-bottom: 2em
+    margin: 1em;
+
+    padding: 1em;
+    background-image: url('/images/fabric.png?1311440663');
+    background-color: #E4E3CD;
+    background-position: top center;
+    border-radius: 1em;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 1px 2px
 }
 
 .group:nth-child(4) {
@@ -123,90 +129,66 @@ p.info {
 }
 
 .group h1 {
-    margin: 0 -5px;
-    padding: 32px 0 16px 0;
     text-align: center;
     font-size: 24px;
     font-weight: bold;
     color: rgba(136, 135, 95, 0.7);
     letter-spacing: -2px;
-    background: url('/images/stitch.png?1311440663') center 8px repeat-x;
     text-shadow: rgba(255, 255, 255, 0.7) 0 1px, rgba(0, 0, 0, 0.2) 0 -1px
 }
 
-.features {
-    width: 100%;
-    margin-top: 1em;
-    padding-bottom: 0.5em;
-    background: #e7e6cf url('/images/fabric.png?1311440663');
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -o-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -khtml-border-radius: 3px;
-    border-radius: 3px;
-    -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 1px 2px;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 1px 2px;
-    -o-box-shadow: rgba(0, 0, 0, 0.5) 0 1px 2px;
-    box-shadow: rgba(0, 0, 0, 0.5) 0 1px 2px
-}
-
-.features, .features a {
+.group, .group a {
     color: #88875F
 }
 
-.features li {
-    margin: 0 1em;
-    position: relative
+.group li {
+    position: relative;
+    display: block;
+    height: 2em;
+    font-size: 1em;
+    padding: 0.5em 64px 0.5em 0;
+    vertical-align: middle;
 }
 
-.features li:last-child {
+.group li:last-child {
     border-bottom: 0
 }
 
-.features li .title {
+.group li .title {
+    white-space: nowrap;
+}
+
+.group li li .title {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     display: block;
-    padding: 0.5em 64px 0.5em 0
+    padding: .5em 64px .5em .5em
 }
 
-.features .support {
+.group .support {
     text-align: right;
-    color: #FFF;
+    color: #ffffff;
     color: rgba(255, 255, 255, 0.8);
     position: absolute;
-    top: 0.6em;
     right: 0;
-    display: block;
-    padding: 4px 6px;
-    -moz-border-radius: 12px;
-    -webkit-border-radius: 12px;
-    -o-border-radius: 12px;
-    -ms-border-radius: 12px;
-    -khtml-border-radius: 12px;
-    border-radius: 12px;
+    border-radius: 1em;
     text-transform: uppercase;
-    font-size: 12px;
     font-weight: bold;
-    -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 1px inset, rgba(255, 255, 255, 0.8) 0 -1px inset;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px inset, rgba(255, 255, 255, 0.8) 0 -1px inset;
-    -o-box-shadow: rgba(0, 0, 0, 0.2) 0 1px inset, rgba(255, 255, 255, 0.8) 0 -1px inset;
     box-shadow: rgba(0, 0, 0, 0.2) 0 1px inset, rgba(255, 255, 255, 0.8) 0 -1px inset
 }
 
-.features .support.support-yes {
+.group .support.support-yes {
     background-color: #78b814;
     background-color: rgba(120, 184, 20, 0.9)
 }
 
-.features .support.support-no {
+.group .support.support-no {
     background-color: #b83314;
     background-color: rgba(184, 51, 20, 0.9)
 }
 
-.features .support.support-maybe, .features .support.support-probably {
+.group .support.support-maybe, .group .support.support-probably {
     background-color: #cfd12b;
     background-color: rgba(207, 209, 43, 0.9)
 }

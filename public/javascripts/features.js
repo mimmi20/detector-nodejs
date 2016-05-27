@@ -425,10 +425,16 @@ for (var property in x) {
       result[property] = convert(!!m[property]);
 
       for (var p in m[property]) {
-        if (!m[property].hasOwnProperty(p)) {
-          result[property + '.' + p] = 'u';
-        } else {
+        if (m[property].hasOwnProperty(p)) {
           result[property + '.' + p] = convert(m[property][p]);
+        } else if (m.hasOwnProperty(property + p)) {
+          result[property + '.' + p] = convert(m[property + p]);
+          result[property + p]       = convert(m[property + p]);
+        } else if (m.hasOwnProperty(p)) {
+          result[property + '.' + p] = convert(m[p]);
+          result[p]                  = convert(m[p]);
+        } else {
+          result[property + '.' + p] = 'u';
         }
       }
     } else {
