@@ -1,21 +1,20 @@
 extends layout
 
 block styles
-  link(rel='stylesheet', href='/stylesheets/screen.css' media='screen, projection')
-  link(rel='stylesheet', href='/stylesheets/mobile.css' media='screen and (max-width: 768px)')
-  link(rel='stylesheet', href='/stylesheets/wide.css' media='screen and (min-width: 1400px)')
+  link(rel='stylesheet' href='/stylesheets/screen.css' media='screen, projection')
 
 block content
-  div#wrapper
-    header#header
-      <h1><img src="/images/logo.png" alt="haz.io" id="logo" /></h1>
-      <p>With the help of the awesome <a href="http://www.modernizr.com/">Modernizr</a> library, haz.io gives you a quick overview of your browser’s support for recent technologies in the world of HTML, CSS and Javascript.</p>
-    div(id='forkme')
-      a(href='https://github.com/mimmi20/detector-nodejs')!= '<img src="/images/ForkMe_Wht.png" width="141" height="141" alt="Fork Me on GitHub"/>'
+  header#header.col-xs-12.col-sm-6.col-md-6.col-lg-6.col-xl-6
+    h1
+      div.logo!= 'haz.io'
+    <p>With the help of the awesome <a href="http://www.modernizr.com/">Modernizr</a> library, haz.io gives you a quick overview of your browser’s support for recent technologies in the world of HTML, CSS and Javascript.</p>
+  div(id='forkme')
+    a(href='https://github.com/mimmi20/detector-nodejs')!= '<img src="/images/ForkMe_Wht.png" width="141" height="141" alt="Fork Me on GitHub"/>'
 
-    div#features
-      each featureGroup in capabilities.sections
-        div.group
+  div#features
+    each featureGroup in capabilities.sections
+      div.group.col-xs-12.col-sm-6.col-md-6.col-lg-4.col-xl-3
+        div.features
           h1= featureGroup.title
           ul
             each feature in featureGroup.features

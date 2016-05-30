@@ -1,8 +1,0 @@
-.group {
-    width: 18%;
-    padding: 0 1%
-}
-
-.group:nth-child(4) {
-    clear: none
-}

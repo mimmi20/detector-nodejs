@@ -653,6 +653,172 @@ module.exports = {
       ]
     },
     {
+      "name": "input",
+      "title": "<input>",
+      "features": [
+        {
+          "name": "inputtypes.color",
+          "title": "input[type=\"color\"]",
+          "specurl": "http://dev.w3.org/html5/spec/Overview.html#color-state"
+        },
+        {
+          "name": "inputtypes.date",
+          "title": "input[type=\"date\"]",
+          "specurl": "http://dev.w3.org/html5/spec/Overview.html#date-state"
+        },
+        {
+          "name": "inputtypes.datetime",
+          "title": "nput[type=\"datetime\"]",
+          "specurl": "http://dev.w3.org/html5/spec/Overview.html#date-and-time-state"
+        },
+        {
+          "name": "inputtypes.datetime-local",
+          "title": "input[type=\"datetime-local\"]",
+          "specurl": "http://dev.w3.org/html5/spec/Overview.html#local-date-and-time-state"
+        },
+        {
+          "name": "inputtypes.email",
+          "title": "input[type=\"email\"]",
+          "specurl": "http://dev.w3.org/html5/spec/Overview.html#e-mail-state"
+        },
+        {
+          "name": "inputtypes.month",
+          "title": "input[type=\"month\"]",
+          "specurl": "http://dev.w3.org/html5/spec/Overview.html#month-state"
+        },
+        {
+          "name": "inputtypes.number",
+          "title": "input[type=\"number\"]",
+          "specurl": "http://dev.w3.org/html5/spec/Overview.html#number-state"
+        },
+        {
+          "name": "localizednumber",
+          "title": "input[type=\"number\"] Localization",
+          "specurl": ""
+        },
+        {
+          "name": "inputtypes.range",
+          "title": "input[type=\"range\"]",
+          "specurl": "http://dev.w3.org/html5/spec/Overview.html#range-state"
+        },
+        {
+          "name": "inputtypes.search",
+          "title": "input[type=\"search\"]",
+          "specurl": "http://dev.w3.org/html5/spec/Overview.html#text-state-and-search-state"
+        },
+        {
+          "name": "inputtypes.tel",
+          "title": "input[type=\"tel\"]",
+          "specurl": "http://dev.w3.org/html5/spec/Overview.html#telephone-state"
+        },
+        {
+          "name": "inputtype.time",
+          "title": "input[type=\"time\"]",
+          "specurl": "http://dev.w3.org/html5/spec/Overview.html#time-state"
+        },
+        {
+          "name": "inputtypes.url",
+          "title": "input[type=\"url\"]",
+          "specurl": "http://dev.w3.org/html5/spec/Overview.html#url-state"
+        },
+        {
+          "name": "inputtypes.week",
+          "title": "input[type=\"week\"]",
+          "specurl": "http://dev.w3.org/html5/spec/Overview.html#week-state"
+        },
+        {
+          "name": "fileinput",
+          "title": "input[file] Attribute",
+          "specurl": ""
+        },
+        {
+          "name": "input.autocomplete",
+          "title": "input[autocomplete] Attribute",
+          "specurl": "http://dev.w3.org/html5/spec/Overview.html#the-autocomplete-attribute"
+        },
+        {
+          "name": "input.autofocus",
+          "title": "input[autofocus] Attribute",
+          "specurl": "http://dev.w3.org/html5/spec/Overview.html#attr-fe-autofocus"
+        },
+        {
+          "name": "input.list",
+          "title": "input[list] Attribute",
+          "specurl": "http://dev.w3.org/html5/spec/Overview.html#attr-input-list"
+        },
+        {
+          "name": "input.placeholder",
+          "title": "input[placeholder] Attribute",
+          "specurl": "http://dev.w3.org/html5/spec/Overview.html#the-placeholder-attribute"
+        },
+        {
+          "name": "input.max",
+          "title": "input[max] Attribute",
+          "specurl": "http://dev.w3.org/html5/spec/Overview.html#the-min-and-max-attributes"
+        },
+        {
+          "name": "input.min",
+          "title": "input[min] Attribute",
+          "specurl": "http://dev.w3.org/html5/spec/Overview.html#the-min-and-max-attributes"
+        },
+        {
+          "name": "input.multiple",
+          "title": "input[multiple] Attribute",
+          "specurl": "http://dev.w3.org/html5/spec/Overview.html#the-multiple-attribute"
+        },
+        {
+          "name": "input.pattern",
+          "title": "input[pattern] Attribute",
+          "specurl": "http://dev.w3.org/html5/spec/Overview.html#the-pattern-attribute"
+        },
+        {
+          "name": "input.required",
+          "title": "input[required] Attribute",
+          "specurl": "http://dev.w3.org/html5/spec/Overview.html#the-required-attribute"
+        },
+        {
+          "name": "input.step",
+          "title": "input[step] Attribute",
+          "specurl": "http://dev.w3.org/html5/spec/Overview.html#the-step-attribute"
+        },
+        {
+          "name": "capture",
+          "title": "input[capture] Attribute",
+          "specurl": "https://www.w3.org/TR/html-media-capture/"
+        },
+        {
+          "name": "fileinputdirectory",
+          "title": "input[directory] Attribute",
+          "specurl": ""
+        },
+        {
+          "name": "formattribute",
+          "title": "input[form] Attribute",
+          "specurl": ""
+        },
+        {
+          "name": "inputformaction",
+          "title": "input[formaction] Attribute",
+          "specurl": "https://html.spec.whatwg.org/multipage/forms.html#attr-fs-formaction"
+        },
+        {
+          "name": "inputformenctype",
+          "title": "input[formenctype] Attribute",
+          "specurl": "https://html.spec.whatwg.org/multipage/forms.html#attr-fs-formenctype"
+        },
+        {
+          "name": "inputformtarget",
+          "title": "input[formtarget] Attribute",
+          "specurl": "https://html.spec.whatwg.org/multipage/forms.html#attr-fs-formtarget"
+        },
+        {
+          "name": "inputformmethod",
+          "title": "input[formmethod] Attribute",
+          "specurl": "https://html.spec.whatwg.org/multipage/forms.html#attr-fs-formmethod"
+        }
+      ]
+    },
+    {
       "name": "meter",
       "title": "<meter>",
       "features": [
@@ -898,178 +1064,6 @@ module.exports = {
           "name": "olreversed",
           "title": "Reverse Ordered Lists",
           "specurl": ""
-        }
-      ]
-    },
-    {
-      "name": "inputtypes",
-      "title": "Input Types",
-      "features": [
-        {
-          "name": "inputtypes.search",
-          "title": "search",
-          "specurl": "http://dev.w3.org/html5/spec/Overview.html#text-state-and-search-state"
-        },
-        {
-          "name": "inputtypes.tel",
-          "title": "tel",
-          "specurl": "http://dev.w3.org/html5/spec/Overview.html#telephone-state"
-        },
-        {
-          "name": "inputtypes.url",
-          "title": "url",
-          "specurl": "http://dev.w3.org/html5/spec/Overview.html#url-state"
-        },
-        {
-          "name": "inputtypes.email",
-          "title": "email",
-          "specurl": "http://dev.w3.org/html5/spec/Overview.html#e-mail-state"
-        },
-        {
-          "name": "inputtypes.datetime",
-          "title": "datetime",
-          "specurl": "http://dev.w3.org/html5/spec/Overview.html#date-and-time-state"
-        },
-        {
-          "name": "inputtypes.date",
-          "title": "date",
-          "specurl": "http://dev.w3.org/html5/spec/Overview.html#date-state"
-        },
-        {
-          "name": "inputtypes.month",
-          "title": "month",
-          "specurl": "http://dev.w3.org/html5/spec/Overview.html#month-state"
-        },
-        {
-          "name": "inputtypes.week",
-          "title": "week",
-          "specurl": "http://dev.w3.org/html5/spec/Overview.html#week-state"
-        },
-        {
-          "name": "inputtypes.time",
-          "title": "time",
-          "specurl": "http://dev.w3.org/html5/spec/Overview.html#time-state"
-        },
-        {
-          "name": "inputtypes.datetime-local",
-          "title": "datetime-local",
-          "specurl": "http://dev.w3.org/html5/spec/Overview.html#local-date-and-time-state"
-        },
-        {
-          "name": "inputtypes.number",
-          "title": "number",
-          "specurl": "http://dev.w3.org/html5/spec/Overview.html#number-state"
-        },
-        {
-          "name": "localizednumber",
-          "title": "input[type=\"number\"] Localization",
-          "specurl": ""
-        },
-        {
-          "name": "inputtypes.range",
-          "title": "range",
-          "specurl": "http://dev.w3.org/html5/spec/Overview.html#range-state"
-        },
-        {
-          "name": "inputtypes.color",
-          "title": "color",
-          "specurl": "http://dev.w3.org/html5/spec/Overview.html#color-state"
-        },
-        {
-          "name": "fileinput",
-          "title": "input[file] Attribute",
-          "specurl": ""
-        }
-      ]
-    },
-    {
-      "name": "input",
-      "title": "Input Attributes",
-      "features": [
-        {
-          "name": "input.autocomplete",
-          "title": "input[autocomplete] Attribute",
-          "specurl": "http://dev.w3.org/html5/spec/Overview.html#the-autocomplete-attribute"
-        },
-        {
-          "name": "input.autofocus",
-          "title": "input[autofocus] Attribute",
-          "specurl": "http://dev.w3.org/html5/spec/Overview.html#attr-fe-autofocus"
-        },
-        {
-          "name": "input.list",
-          "title": "input[list] Attribute",
-          "specurl": "http://dev.w3.org/html5/spec/Overview.html#attr-input-list"
-        },
-        {
-          "name": "input.placeholder",
-          "title": "input[placeholder] Attribute",
-          "specurl": "http://dev.w3.org/html5/spec/Overview.html#the-placeholder-attribute"
-        },
-        {
-          "name": "input.max",
-          "title": "input[max] Attribute",
-          "specurl": "http://dev.w3.org/html5/spec/Overview.html#the-min-and-max-attributes"
-        },
-        {
-          "name": "input.min",
-          "title": "input[min] Attribute",
-          "specurl": "http://dev.w3.org/html5/spec/Overview.html#the-min-and-max-attributes"
-        },
-        {
-          "name": "input.multiple",
-          "title": "input[multiple] Attribute",
-          "specurl": "http://dev.w3.org/html5/spec/Overview.html#the-multiple-attribute"
-        },
-        {
-          "name": "input.pattern",
-          "title": "input[pattern] Attribute",
-          "specurl": "http://dev.w3.org/html5/spec/Overview.html#the-pattern-attribute"
-        },
-        {
-          "name": "input.required",
-          "title": "input[required] Attribute",
-          "specurl": "http://dev.w3.org/html5/spec/Overview.html#the-required-attribute"
-        },
-        {
-          "name": "input.step",
-          "title": "input[step] Attribute",
-          "specurl": "http://dev.w3.org/html5/spec/Overview.html#the-step-attribute"
-        },
-        {
-          "name": "capture",
-          "title": "input[capture] Attribute",
-          "specurl": "https://www.w3.org/TR/html-media-capture/"
-        },
-        {
-          "name": "fileinputdirectory",
-          "title": "input[directory] Attribute",
-          "specurl": ""
-        },
-        {
-          "name": "formattribute",
-          "title": "input[form] Attribute",
-          "specurl": ""
-        },
-        {
-          "name": "inputformaction",
-          "title": "input[formaction] Attribute",
-          "specurl": "https://html.spec.whatwg.org/multipage/forms.html#attr-fs-formaction"
-        },
-        {
-          "name": "inputformenctype",
-          "title": "input[formenctype] Attribute",
-          "specurl": "https://html.spec.whatwg.org/multipage/forms.html#attr-fs-formenctype"
-        },
-        {
-          "name": "inputformtarget",
-          "title": "input[formtarget] Attribute",
-          "specurl": "https://html.spec.whatwg.org/multipage/forms.html#attr-fs-formtarget"
-        },
-        {
-          "name": "inputformmethod",
-          "title": "input[formmethod] Attribute",
-          "specurl": "https://html.spec.whatwg.org/multipage/forms.html#attr-fs-formmethod"
         }
       ]
     },
