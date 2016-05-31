@@ -1,18 +1,10 @@
 extends layout
 
 block styles
-  link(rel='stylesheet' href='/stylesheets/detector.css')
+  link(rel='stylesheet' href='/stylesheets/screen.css' media='screen, projection')
 
 block content
   div.content.clearfix
-    div.page-header.col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.clearfix
-      h1
-        a(href='/') Detector
-        span.label.notice.beta beta
-        small= ' combined browser- & feature-detection for your app '
-      div(id='forkme')
-        a(href='https://github.com/dmolsen/Detector')!= '<img src="/images/ForkMe_Wht.png" width="141" height="141" alt="Fork Me on GitHub"/>'
-
     div.row.clearfix
       div.col-xs-12.col-sm-12.col-md-12.col-lg-9.col-xl-9
         p.row.

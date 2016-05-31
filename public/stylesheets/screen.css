@@ -76,41 +76,42 @@ a.spec:hover:after {
     height: 140px;
 }
 
-#header h1 {
-    float: left;
-    width: 210px;
-    height: 140px;
-}
-
 #forkme {
     position: absolute;
     top: 0;
     right: 0;
+    display: block;
+    width: 141px;
+    height: 141px;
+    background: url('/images/ForkMe_Wht.png') top center no-repeat;
 }
 
-h1 .logo {
+.logo {
+    display: inline-block;
+    width: 7em;
+    height: 2em;
+    /*background: url('/images/logo.png') top center no-repeat;*/
     text-align: center;
-    vertical-align: sub;
-    font-weight: bold;
-    font-size: 1.5em;
-    letter-spacing: 1px;
-    line-height: 2em;
-    background-color: #E4E3CD;
-    padding: .1em;
+    vertical-align: text-bottom;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 50px;
+    background-color: #C9C8AD;
+    padding: 20px;
     border-bottom-left-radius: .1em;
     border-bottom-right-radius: .1em;
     transform: rotate(-3.5deg);
     top: -10px;
     left: 23px;
     position: absolute;
-    width: 195px;
-    height: 140px;
-    float: left;
+    color: #989773;
+    text-shadow: rgba(255, 255, 255, 0.7) 0 1px, rgba(0, 0, 0, 0.2) 0 -1px
 }
 
 #header p {
     text-align: left;
     margin-top: 5em;
+    margin-left: 26em;
     text-shadow: rgba(0, 0, 0, 0.3) 0 1px;
     line-height: 1.4
 }
@@ -147,7 +148,7 @@ p.info {
     font-weight: bold;
     color: rgba(136, 135, 95, 0.7);
     letter-spacing: 1px;
-    text-shadow: rgba(255, 255, 255, 0.7) 0 1px, rgba(0, 0, 0, 0.2) 0 -1px
+    text-shadow: rgba(255, 255, 255, 0.7) 0 1px, rgba(0, 0, 0, 0.2) 0 -1px;
 }
 
 .features, .features a {

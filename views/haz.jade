@@ -3,14 +3,10 @@ extends layout
 block styles
   link(rel='stylesheet' href='/stylesheets/screen.css' media='screen, projection')
 
-block content
-  header#header.col-xs-12.col-sm-6.col-md-6.col-lg-6.col-xl-6
-    h1
-      div.logo!= 'haz.io'
-    <p>With the help of the awesome <a href="http://www.modernizr.com/">Modernizr</a> library, haz.io gives you a quick overview of your browser’s support for recent technologies in the world of HTML, CSS and Javascript.</p>
-  div(id='forkme')
-    a(href='https://github.com/mimmi20/detector-nodejs')!= '<img src="/images/ForkMe_Wht.png" width="141" height="141" alt="Fork Me on GitHub"/>'
+block header
+  <p>With the help of the awesome <a href="http://www.modernizr.com/">Modernizr</a> library, browscap.de gives you a quick overview of your browser’s support for recent technologies in the world of HTML, CSS and Javascript.</p>
 
+block content
   div#features
     each featureGroup in capabilities.sections
       div.group.col-xs-12.col-sm-6.col-md-6.col-lg-4.col-xl-3

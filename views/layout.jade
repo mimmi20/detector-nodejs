@@ -26,5 +26,9 @@ html(lang='en')
     block styles
   body
     div.container-fluid
+      header#header.col-xs-12.col-sm-11.col-md-10.col-lg-9.col-xl-9
+        h1.logo!= 'browscap.de'
+        block header
+      a(id='forkme' href='https://github.com/mimmi20/detector-nodejs' title='Fork me on GitHub')
       block content
       block footer
