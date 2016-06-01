@@ -138,10 +138,6 @@ p.info {
     box-shadow: rgba(0, 0, 0, 0.5) 0 1px 2px
 }
 
-.group:nth-child(4) {
-    clear: left
-}
-
 .group h1 {
     text-align: center;
     font-size: 2em;
@@ -172,20 +168,30 @@ p.info {
     border-bottom: 0
 }
 
-.features li .title {
+.features li .title, .features li .short-title {
     white-space: nowrap;
     padding: 0.1em 3em 0.1em 0;
     overflow: hidden;
     display: inline-block;
+}
+
+.features li .title {
     width: 100%;
+}
+
+.features li .short-title {
+    width: 25%;
+}
+
+.features .support, .features .text-support {
+    position: absolute;
+    right: 0;
 }
 
 .features .support {
     text-align: right;
     color: #ffffff;
     color: rgba(255, 255, 255, 0.8);
-    position: absolute;
-    right: 0;
     border-radius: 1em;
     text-transform: uppercase;
     font-weight: bold;
@@ -221,13 +227,11 @@ p.info {
 }
 
 footer {
-    background: url('/images/double-stitch.png?1311440663') top center repeat-x;
     font-size: 12px;
     clear: both;
     text-align: center;
     line-height: 1.4;
     padding-top: 48px;
-    margin: 16px -48px 0 -48px
 }
 
 footer a {

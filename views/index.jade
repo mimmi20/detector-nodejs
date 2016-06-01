@@ -1,36 +1,91 @@
 extends layout
 
-block styles
-  link(rel='stylesheet' href='/stylesheets/screen.css' media='screen, projection')
-
 block content
-  div.content.clearfix
-    div.row.clearfix
-      div.col-xs-12.col-sm-12.col-md-12.col-lg-9.col-xl-9
-        p.row.
-          With the initial release of <a href="http://yiibu.com/">Yiibu&apos;s</a> <a
-              href="https://github.com/yiibu/profile">Profile</a>, <a href="https://github.com/dmolsen/Detector">Detector</a>
-          is already <abbr title="Yet Another Browser- and Feature-Detection Library">YABFDL</abbr>
-          <em>(Yet Another Browser- and Feature-Detection Library)</em>. Ever since I heard Yiibu's talk,
-          <a href="http://www.slideshare.net/yiibu/adaptation-why-responsive-design-actually-begins-on-the-server">Adaptation</a>,
-          the core concepts & features of Detector have been floating around in my head. I've finally turned those
-          ideas into <a href="https://github.com/dmolsen/Detector">code</a> and created this demo.
-          To learn more about <a href="https://github.com/dmolsen/Detector">Detector</a> and how it works please check
-          out the <a href="https://github.com/dmolsen/Detector">README on GitHub</a>.
-        include ./partials/_browserprofile.jade
-        include ./partials/_featureprofile.jade
-      div.col-xs-12.col-sm-12.col-md-12.col-lg-3.col-xl-3
-        include ./partials/_about.jade
-        include ./partials/_moreinfo.jade
-        include ./partials/_credits.jade
-        include ./partials/_archive.jade
-  script(src='/javascripts/jquery-1.12.4.min.js' type='text/javascript')
-  script(src='/javascripts/show-capabilities.js' type='text/javascript')
+  div#features
+    div.group.col-xs-12
+      div.features
+        h1!= 'general information'
+        ul
+          li.feature
+            span.short-title!= 'User Agent:'
+            span.text-support= ua
+
+    div.group.col-xs-12.col-sm-6.col-md-6.col-lg-4.col-xl-3
+      div.features
+        h1!= 'your browser'
+        ul
+          li.feature
+            span.short-title!= 'browser name:'
+            span.text-support= browser['Browser']
+          li.feature
+            span.short-title!= 'version:'
+            span.text-support= browser['Version']
+          li.feature
+            span.short-title!= 'manufacturer:'
+            span.text-support= browser['Browser_Maker']
+          li.feature
+            span.short-title!= 'type:'
+            span.text-support= browser['Browser_Type']
+          li.feature
+            span.short-title!= 'is a bot?'
+            span.text-support= browser['Crawler']
+
+    div.group.col-xs-12.col-sm-6.col-md-6.col-lg-4.col-xl-3
+      div.features
+        h1!= 'your rendering engine'
+        ul
+          li.feature
+            span.short-title!= 'name:'
+            span.text-support= browser['RenderingEngine_Name']
+          li.feature
+            span.short-title!= 'version:'
+            span.text-support= browser['RenderingEngine_Version']
+          li.feature
+            span.short-title!= 'manufacturer:'
+            span.text-support= browser['RenderingEngine_Maker']
+
+    div.group.col-xs-12.col-sm-6.col-md-6.col-lg-4.col-xl-3
+      div.features
+        h1!= 'your os'
+        ul
+          li.feature
+            span.short-title!= 'name:'
+            span.text-support= browser['Platform']
+          li.feature
+            span.short-title!= 'version:'
+            span.text-support= browser['Platform_Version']
+          li.feature
+            span.short-title!= 'manufacturer:'
+            span.text-support= browser['Platform_Maker']
+
+    div.group.col-xs-12.col-sm-6.col-md-6.col-lg-4.col-xl-3
+      div.features
+        h1!= 'your device'
+        ul
+          li.feature
+            span.short-title!= 'device:'
+            span.text-support= browser['Device_Name']
+          li.feature
+            span.short-title!= 'type:'
+            span.text-support= browser['Device_Type']
+          li.feature
+            span.short-title!= 'manufacturer:'
+            span.text-support= browser['Device_Maker']
+          li.feature
+            span.short-title!= 'brand:'
+            span.text-support= browser['Device_Brand_Name']
+          li.feature
+            span.short-title!= 'code name:'
+            span.text-support= browser['Device_Code_Name']
+          li.feature
+            span.short-title!= 'is mobile?'
+            span.text-support= browser['isMobileDevice']
+          li.feature
+            span.short-title!= 'is a tablet?'
+            span.text-support= browser['isTablet']
 
 block footer
-  footer.clearfix
-    p
-      != ' &copy; '
-      a(href='http://dmolsen.com/') Dave Olsen
-      != ' 2012 | Design based on '
-      a(href='http://twitter.github.com/bootstrap/') Bootstrap
+  footer.col-xs-12
+    p.
+      Created by <a href="http://github.com/mimmi20/">Thomas Müller</a> as a nodeJs port of <a href="http://haz.io/">haz.io</a>.
+      Powered by <a href="http://modernizr.com/">Modernizr 3</a>.

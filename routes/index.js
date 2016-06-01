@@ -6,8 +6,7 @@ router.get('/', function(req, res) {
   var Browscap = require('browscap-js'),
     browscap = new Browscap(),
     ua = req.headers['user-agent'],
-    browser,
-    capabilities = require('../data/capabilities.js');
+    browser;
 
   console.log('User-Agent: ' + ua);
 
@@ -19,38 +18,18 @@ router.get('/', function(req, res) {
     {
       title: 'Detector [BETA] - combined browser- & feature-detection for your app',
       ua: ua,
-      browsername: browser['Browser'],
-      devicename: browser['Device_Name'],
-      mobile: browser['isMobileDevice'],
-      tablet: browser['isTablet'],
-      bot: browser['Crawler'],
-      capabilities: capabilities
+      browser: browser
     }
   );
 });
 
 router.get('/haz', function(req, res) {
-  var Browscap = require('browscap-js'),
-    browscap = new Browscap(),
-    ua = req.headers['user-agent'],
-    browser,
-    capabilities = require('../data/capabilities.js');
-
-  console.log('User-Agent: ' + ua);
-
-  browser = browscap.getBrowser(ua);
-  console.log(JSON.stringify(browser));
+  var capabilities = require('../data/capabilities.js');
 
   res.render(
     'haz',
     {
       title: 'Detector [BETA] - combined browser- & feature-detection for your app',
-      ua: ua,
-      browsername: browser['Browser'],
-      devicename: browser['Device_Name'],
-      mobile: browser['isMobileDevice'],
-      tablet: browser['isTablet'],
-      bot: browser['Crawler'],
       capabilities: capabilities
     }
   );
