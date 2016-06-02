@@ -23,14 +23,23 @@ router.get('/', function(req, res) {
   );
 });
 
-router.get('/haz', function(req, res) {
+router.get('/features', function(req, res) {
   var capabilities = require('../data/capabilities.js');
 
   res.render(
-    'haz',
+    'features',
     {
       title: 'Detector [BETA] - combined browser- & feature-detection for your app',
       capabilities: capabilities
+    }
+  );
+});
+
+router.get('/downloads', function(req, res) {
+  res.render(
+    'downloads',
+    {
+      title: 'Detector [BETA] - combined browser- & feature-detection for your app'
     }
   );
 });
