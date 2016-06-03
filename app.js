@@ -25,7 +25,7 @@ app.set('strict routing', true);
 app.set('x-powered-by', false);
 
 app.use(compression({threshold: 1}));
-app.use(logger('dev'));
+app.use(logger(app.get('env')));
 app.use(methodOverride('X-HTTP-Method-Override'));
 app.use(responseTime(4));
 //app.use(favicon(__dirname + '/public/favicon.ico'));
