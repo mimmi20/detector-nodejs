@@ -17,22 +17,24 @@ block header
   <p>With the help of the awesome <a href="http://www.modernizr.com/">Modernizr</a> library, browscap.de gives you a quick overview of your browser’s support for recent technologies in the world of HTML, CSS and Javascript.</p>
 
 block content
-  div#features
-    each featureGroup in capabilities.sections
-      div.group.col-xs-12.col-sm-6.col-md-6.col-lg-4.col-xl-3
-        div.features
-          h1= featureGroup.title
-          ul
-            each feature in featureGroup.features
-              li.feature
-                span.title= feature.title
-                span(data-capability= feature.name)
-                if feature.subfeatures
-                  ul.subfeatures
-                    each subfeature in feature.subfeatures
-                      li.feature
-                        span.title= subfeature.title
-                        span(data-capability= subfeature.name)
+  div.row#features
+    div.card-columns
+      each featureGroup in capabilities.sections
+        div.group.col-xs-12.col-sm-6.col-md-6.col-lg-4.col-xl-3
+          section.card
+            h1.card-header= featureGroup.title
+            div.card-block.card-inverse
+              ul.list-group.list-group-flush
+                each feature in featureGroup.features
+                  li.list-group-item
+                    span.title= feature.title
+                    span(data-capability= feature.name)
+                    if feature.subfeatures
+                      ul.subfeatures.list-group.list-group-flush
+                        each subfeature in feature.subfeatures
+                          li.feature.list-group-item
+                            span.title= subfeature.title
+                            span(data-capability= subfeature.name)
 
   script(src='/javascripts/jquery-1.12.4.min.js' type='text/javascript')
   script(src='/javascripts/show-capabilities-haz.js' type='text/javascript')
